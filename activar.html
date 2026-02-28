@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activar mi Tag - Paw Tag</title>
+    <meta name="description"
+        content="Vincula tu Paw Tag rápidamente para comenzar a proteger la información vital de tu compañero.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/pawtag-icon.png">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-config.js"></script>
+</head>
+
+<body
+    class="bg-pawbg dark:bg-pawbgdark text-pawtext dark:text-pawtextdark font-sans antialiased min-h-screen flex flex-col transition-colors">
+
+    <!-- Minimal Navbar -->
+    <nav
+        class="w-full bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex justify-center items-center h-20">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="img/pawtag-logo.png" alt="Paw Tag logo oficial" class="h-10 w-auto">
+                </a>
+            </div>
+
+            <!-- Controls Positioned Absolute in Navbar -->
+            <div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-3">
+                <!-- Language Switcher -->
+                <select id="language-select"
+                    class="bg-transparent text-sm font-medium text-pawtext dark:text-pawtextdark border-none focus:ring-0 cursor-pointer outline-none">
+                    <option value="es" class="text-black">ES</option>
+                    <option value="en" class="text-black">EN</option>
+                    <option value="pt" class="text-black">PT</option>
+                </select>
+
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div
+            class="max-w-md w-full bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700 p-8 md:p-10 text-center transition-colors">
+
+            <!-- Graphic Element -->
+            <div
+                class="w-24 h-24 bg-pawmint/40 dark:bg-pawmintdark/20 rounded-full mx-auto mb-8 flex items-center justify-center relative">
+                <div
+                    class="absolute inset-0 border-2 border-dashed border-pawgreen dark:border-pawmint rounded-full animate-[spin_10s_linear_infinite]">
+                </div>
+                <!-- Simbolizando un celular acercándose al tag -->
+                <svg class="w-10 h-10 text-pawgreen dark:text-pawmint z-10" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <div
+                    class="absolute -right-2 -top-2 w-8 h-8 bg-pawgold rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800 text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight"
+                data-i18n="activar.welcome">
+                ¡Bienvenido a la familia!
+            </h1>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg leading-relaxed" data-i18n="activar.subtitle">
+                Estás a un paso de darle a tu mejor amigo el cuidado digital que merece.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <a href="https://apps.apple.com/mx/app/paw-tag/id6739967090?l=en-GB" target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto flex justify-center items-center gap-2 px-6 py-4 border border-transparent text-base font-bold rounded-2xl text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-all shadow-lg">
+                    <img src="img/logotipo-de-apple.png" alt="Apple" class="w-6 h-6 object-contain invert">
+                    <span data-i18n="activar.btn_vincular_apple">Descargar en App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.macedas.paw_tag&hl=es" target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto flex justify-center items-center gap-2 px-6 py-4 border border-transparent text-base font-bold rounded-2xl text-white bg-pawgreen dark:bg-pawmintdark hover:bg-emerald-700 dark:hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pawgreen transition-all shadow-lg hover:shadow-pawgreen/30">
+                    <img src="img/google-play.png" alt="Google Play" class="w-6 h-6 object-contain">
+                    <span data-i18n="activar.btn_vincular_android">Disponible en Google Play</span>
+                </a>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700 transition-colors">
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    <span data-i18n="activar.help_text">¿Necesitas ayuda para empezar?</span> <br class="md:hidden">
+                    <a href="https://youtube.com/shorts/pNTKm-VZmdA?si=M9nc5_omec4oQHWM" target="_blank"
+                        rel="noopener noreferrer"
+                        class="font-medium text-pawgreen dark:text-pawmint hover:text-emerald-700 hover:underline inline-flex items-center gap-1"
+                        data-i18n="activar.help_link">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Ver tutorial paso a paso
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="w-full text-center py-6 text-sm text-gray-400 dark:text-gray-500">
+        <p data-i18n="activar.rights">&copy; 2026 Paw Tag. Cuidado inteligente.</p>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</body>
+
+</html>

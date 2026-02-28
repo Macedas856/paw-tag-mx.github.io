@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Tag | El ecosistema de seguridad y bienestar para tu compañero</title>
+    <meta name="description"
+        content="Protege a tu compañero con Paw Tag. Accede a su ubicación, historial médico y documentos digitales al instante. Únete a la comunidad de dueños responsables.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/pawtag-icon.png">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- JSON-LD Schema Markup (AEO/SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Paw Tag",
+          "description": "El ecosistema de seguridad y bienestar para compañeros que conecta el mundo físico con el digital. Accede a perfil médico, documentos y más desde un collar inteligente.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Paw Tag"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "349.00",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock",
+            "url": "https://vt.tiktok.com/ZS9evQ5ffuQDV-RH0E3/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué hace diferente a Paw Tag?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paw Tag va mucho más allá de un simple localizador; es un ecosistema completo para dueños responsables. Además de contar con tecnología de rastreo mediante \"Red de Cercanía\" (similar a otros localizadores de alta gama), incluye un pasaporte médico digital completo. Desde una sola aplicación puedes gestionar el historial clínico de tu compañero, guardar sus documentos importantes y conectar con una comunidad activa, todo diseñado desde el amor y el respeto por su bienestar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo vinculo mi cuenta de Paw Tag?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El proceso es muy intuitivo y toma menos de un par de minutos. Solo necesitas descargar nuestra aplicación móvil gratuita y crear el perfil digital de tu compañero. Después, simplemente acerca tu celular a la medalla física para que la tecnología NFC la detecte al instante. La medalla y la aplicación quedarán vinculadas de inmediato."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Funciona en cualquier tipo de celular?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, el ecosistema está diseñado para ser totalmente accesible. La lectura de la placa funciona con cualquier teléfono inteligente moderno (iOS o Android) que cuente con lector NFC integrado. Quien encuentre a tu compañero no necesita tener la app instalada para poder leer la placa y contactarte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito recargar la batería de la medalla Paw Tag?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, no tendrás que preocuparte por cables ni por recordar cargarla cada semana. Paw Tag funciona con una batería de reloj estándar intercambiable que tiene una duración aproximada de un año. Cuando se agote, puedes reemplazarla tú mismo fácilmente por muy bajo costo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué pasa exactamente cuando alguien escanea la placa de mi compañero?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si tu compañero llega a extraviarse, la persona que lo encuentre solo debe acercar su celular a la medalla. Al hacerlo, se abrirá instantáneamente una pantalla de emergencia en su navegador (pudiendo incluso mostrar un video tuyo dando instrucciones), mostrando únicamente tu información de contacto esencial y los datos médicos urgentes para facilitar un regreso a casa rápido y seguro."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-pawbg dark:bg-pawbgdark text-pawtext dark:text-pawtextdark font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 bg-white/90 dark:bg-pawbgdark/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <img src="img/pawtag-logo.png" alt="Paw Tag logo oficial" class="h-10 w-auto">
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beneficios"
+                        class="text-pawtext dark:text-pawtextdark hover:text-pawgreen dark:hover:text-pawmint font-medium transition-colors"
+                        data-i18n="nav.beneficios">Beneficios</a>
+                    <a href="#como-funciona"
+                        class="text-pawtext dark:text-pawtextdark hover:text-pawgreen dark:hover:text-pawmint font-medium transition-colors"
+                        data-i18n="nav.como_funciona">Cómo funciona</a>
+                    <a href="#veterinarias"
+                        class="text-pawtext dark:text-pawtextdark hover:text-pawgreen dark:hover:text-pawmint font-medium transition-colors"
+                        data-i18n="nav.veterinarias">Negocios</a>
+                    <a href="#faq"
+                        class="text-pawtext dark:text-pawtextdark hover:text-pawgreen dark:hover:text-pawmint font-medium transition-colors"
+                        data-i18n="nav.faq">FAQ</a>
+                </div>
+                <!-- Right Controls (CTA, Lang, Dark Mode) -->
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- Language Switcher -->
+                    <select id="language-select"
+                        class="bg-transparent text-sm font-medium text-pawtext dark:text-pawtextdark border-none focus:ring-0 cursor-pointer outline-none">
+                        <option value="es" class="text-black">ES</option>
+                        <option value="en" class="text-black">EN</option>
+                        <option value="pt" class="text-black">PT</option>
+                    </select>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" type="button"
+                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <a href="activar.html"
+                        class="bg-pawtext dark:bg-white text-white dark:text-pawtext px-6 py-2.5 rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-md"
+                        data-i18n="nav.activar">
+                        Activar mi Tag
+                    </a>
+                </div>
+                <!-- Mobile button (visual only) -->
+                <div class="md:hidden flex items-center gap-2">
+                    <!-- Mobile Dark Toggle -->
+                    <button type="button" class="text-gray-500 dark:text-gray-400 p-2">...</button>
+                    <button class="text-pawtext dark:text-pawtextdark p-2" id="mobile-menu-btn">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Placeholder -->
+        <div class="hidden md:hidden bg-white dark:bg-pawbgdark border-t border-gray-100 dark:border-gray-800 absolute w-full"
+            id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#beneficios" class="block px-3 py-2 text-pawtext dark:text-pawtextdark font-medium"
+                    data-i18n="nav.beneficios">Beneficios</a>
+                <a href="#como-funciona" class="block px-3 py-2 text-pawtext dark:text-pawtextdark font-medium"
+                    data-i18n="nav.como_funciona">Cómo funciona</a>
+                <a href="#veterinarias" class="block px-3 py-2 text-pawtext dark:text-pawtextdark font-medium"
+                    data-i18n="nav.veterinarias">Negocios</a>
+                <a href="#faq" class="block px-3 py-2 text-pawtext dark:text-pawtextdark font-medium"
+                    data-i18n="nav.faq">FAQ</a>
+                <a href="activar.html" class="block px-3 py-2 text-pawgreen font-bold" data-i18n="nav.activar">Activar
+                    mi Tag</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-pawbgdark transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left z-10">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pawmint/50 dark:bg-pawmintdark/20 text-pawgreen dark:text-pawmint font-semibold text-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-pawgreen dark:bg-pawmint animate-pulse"></span>
+                        <span data-i18n="hero.badge">La evolución del cuidado animal</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        <span data-i18n="hero.title_1">El vínculo más </span><span
+                            class="text-pawgreen dark:text-pawmint" data-i18n="hero.title_highlight">seguro</span><span
+                            data-i18n="hero.title_2"> para tu mejor amigo</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0"
+                        data-i18n="hero.subtitle">
+                        No es solo un collar. Es un pasaporte digital que conecta el historial médico, ubicación y tu
+                        amor incondicional en un solo tap.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+                        <a href="https://vt.tiktok.com/ZS9evQ5ffuQDV-RH0E3/" target="_blank" rel="noopener noreferrer"
+                            class="bg-pawgold text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 hover:-translate-y-1 transition-all shadow-lg shadow-pawgold/30 flex items-center justify-center gap-2"
+                            data-i18n="hero.btn_obtener">
+                            Comprar en TikTok Shop
+                        </a>
+                        <a href="activar.html"
+                            class="bg-white dark:bg-gray-800 text-pawtext dark:text-white border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-full font-bold text-lg hover:border-pawgreen dark:hover:border-pawmint hover:text-pawgreen transition-colors text-center"
+                            data-i18n="hero.btn_ya_tengo">
+                            Ya tengo uno
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center lg:justify-start gap-4">
+                        <a href="https://apps.apple.com/mx/app/paw-tag/id6739967090?l=en-GB" target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center justify-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-gray-800 transition-colors w-40 h-12">
+                            <img src="img/logotipo-de-apple.png" alt="Apple"
+                                class="w-5 h-5 flex-shrink-0 object-contain invert">
+                            <span class="text-xs font-semibold" data-i18n="hero.btn_apple">App Store</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.macedas.paw_tag&hl=es"
+                            target="_blank" rel="noopener noreferrer"
+                            class="flex items-center justify-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-gray-800 transition-colors w-40 h-12">
+                            <img src="img/google-play.png" alt="Google Play"
+                                class="w-5 h-5 flex-shrink-0 object-contain">
+                            <span class="text-xs font-semibold" data-i18n="hero.btn_android">Google Play</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Placeholder -->
+                <div class="relative z-10 mx-auto w-full max-w-md lg:max-w-none">
+                    <div
+                        class="aspect-square rounded-full bg-gradient-to-tr from-pawmint to-white shadow-2xl flex items-center justify-center p-8 relative">
+                        <!-- Decorative circles -->
+                        <div
+                            class="absolute inset-0 border-[3px] border-dashed border-pawgreen/20 rounded-full animate-[spin_60s_linear_infinite]">
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-pawgreen/10 rounded-full flex items-center justify-center">🩺
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium"
+                                        data-i18n="hero.vaccines">Vacunas</p>
+                                    <p class="text-sm font-bold text-pawgreen dark:text-pawmint"
+                                        data-i18n="hero.up_to_date">Al día</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Product Image -->
+                        <div
+                            class="w-4/5 h-4/5 rounded-full bg-white dark:bg-gray-800 shadow-inner flex flex-col items-center justify-center overflow-hidden border-8 border-pawbg dark:border-pawbgdark relative group">
+                            <img src="img/producto-blanco.png" alt="Paw Tag Smart Tag"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+
+                            <!-- Price tag floating over image -->
+                            <div class="absolute bottom-4 bg-black/80 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg"
+                                data-i18n="hero.price_info">
+                                $349 MXN
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background blob -->
+        <div
+            class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-pawmint/40 dark:bg-pawmintdark/10 rounded-full blur-3xl -z-10">
+        </div>
+
+        <!-- Lifestyle Image Overflowing -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative mt-16 lg:mt-24 hidden md:block">
+            <div class="w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl relative">
+                <img src="img/foto-uso-1.png" alt="Compañero feliz con Paw Tag" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                    <p class="text-white text-xl md:text-2xl font-bold max-w-2xl text-balance">
+                        Conecta el mundo físico con el digital para darle el mejor cuidado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios (Grid) -->
+    <section id="beneficios" class="py-20 bg-pawbg dark:bg-pawbgdark transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-i18n="beneficios.title_1">Todo lo que importa, </span><span
+                        class="text-pawgreen dark:text-pawmint" data-i18n="beneficios.title_highlight">siempre
+                        contigo</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="beneficios.subtitle">Un
+                    ecosistema diseñado desde el respeto y el amor, brindando tranquilidad en cada momento del día.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-pawmint dark:bg-pawmintdark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-pawgreen dark:text-pawmint" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="beneficios.card1_title">Escaneo Rápido</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="beneficios.card1_desc">Quien
+                        encuentre a tu mascota solo necesita acercar su teléfono para ver tu contacto y ubicación.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-pawmint dark:bg-pawmintdark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-pawgreen dark:text-pawmint" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="beneficios.card2_title">Historial Médico</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="beneficios.card2_desc">
+                        Vacunas, alergias y tratamientos accesibles al instante para cualquier emergencia veterinaria.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-pawmint dark:bg-pawmintdark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-pawgreen dark:text-pawmint" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="beneficios.card3_title">Docs Digitales</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="beneficios.card3_desc">
+                        Olvídate del papeleo. Lleva el registro, aseguradoras y certificados de viaje en tu bolsillo.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 group">
+                    <div
+                        class="w-14 h-14 bg-pawmint dark:bg-pawmintdark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-pawgreen dark:text-pawmint" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="beneficios.card4_title">Comunidad Activa</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="beneficios.card4_desc">
+                        Conecta con otros dueños responsables, descubre parques pet-friendly y recibe alertas vecinales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section id="como-funciona"
+        class="py-20 bg-white dark:bg-gray-900 relative border-t border-gray-200 dark:border-gray-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-i18n="como_funciona.title_1">Comenzar es </span><span class="text-pawgold"
+                        data-i18n="como_funciona.title_highlight">muy simple</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400" data-i18n="como_funciona.subtitle">Tecnología avanzada,
+                    diseñada para ser intuitiva.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 relative max-w-5xl mx-auto">
+                <!-- Linea conectora desktop -->
+                <div
+                    class="hidden md:block absolute top-[15%] left-[10%] right-[10%] h-0.5 bg-gray-200 dark:bg-gray-700 -z-0">
+                </div>
+
+                <!-- Paso 1 -->
+                <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+                    <div
+                        class="w-20 h-20 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl font-black text-pawgreen dark:text-pawmint shadow-lg mb-6 border-4 border-pawbg dark:border-pawbgdark">
+                        1
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" data-i18n="como_funciona.step1_title">Adquiere tu Tag</h4>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="como_funciona.step1_desc">Recibe tu medalla
+                        inteligente con diseño exclusivo Paw Tag.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+                    <div
+                        class="w-20 h-20 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl font-black text-pawgold dark:text-yellow-400 shadow-lg mb-6 border-4 border-pawbg dark:border-pawbgdark">
+                        2
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" data-i18n="como_funciona.step2_title">Escanea y Vincula</h4>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="como_funciona.step2_desc">Acerca tu celular a
+                        la medalla y crea el perfil de tu compañero gratis.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="relative z-10 flex flex-col items-center max-w-xs text-center">
+                    <div
+                        class="w-20 h-20 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl font-black text-pawgreen dark:text-pawmint shadow-lg mb-6 border-4 border-pawbg dark:border-pawbgdark">
+                        3
+                    </div>
+                    <h4 class="text-xl font-bold mb-2" data-i18n="como_funciona.step3_title">Seguridad Total</h4>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="como_funciona.step3_desc">Colócalo en su
+                        collar. Su información vital ahora está protegida.</p>
+                </div>
+            </div>
+
+            <!-- Mockups Flex Container -->
+            <div
+                class="flex flex-col md:flex-row justify-center items-center gap-8 mt-20 max-w-lg md:max-w-4xl mx-auto px-4 hover:group">
+                <div
+                    class="w-full md:w-[40%] h-auto rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-gray-800 transform md:-rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 hover:z-20 cursor-pointer">
+                    <img src="img/mockup-cel-1.jpeg" alt="Descarga la app Paw Tag" class="w-full h-auto object-cover">
+                </div>
+                <div
+                    class="w-full md:w-[40%] h-auto rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-100 dark:border-gray-800 transform md:rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 md:mt-24 hover:z-20 cursor-pointer">
+                    <img src="img/mockup-cel-2.jpeg" alt="Vincula la app Paw Tag" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección B2B (Veterinarias) -->
+    <section id="veterinarias" class="py-24 bg-pawgreen dark:bg-pawmintdark relative overflow-hidden transition-colors">
+        <!-- Texturas de fondo -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 text-center lg:text-left flex flex-col lg:flex-row items-center gap-10">
+                <div class="flex-1 text-white">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white font-semibold text-sm mb-4 tracking-wide uppercase"
+                        data-i18n="veterinarias.badge">Partnership B2B</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight" data-i18n="veterinarias.title">¿Tienes
+                        una clínica o estética canina?</h2>
+                    <p class="text-pawmint dark:text-teal-100 text-lg md:text-xl mb-8 max-w-2xl"
+                        data-i18n="veterinarias.subtitle">
+                        Únete a la red oficial de Paw Tag. Ofrece a tus clientes el registro médico digital más avanzado
+                        y dale un valor agregado diferencial a tus servicios.
+                    </p>
+                    <ul class="text-white space-y-3 mb-8 text-left max-w-md mx-auto lg:mx-0">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded-full bg-pawgold flex items-center justify-center text-white text-sm">✓</span>
+                            <span data-i18n="veterinarias.feat1">Digitalización de carnets de vacunación</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded-full bg-pawgold flex items-center justify-center text-white text-sm">✓</span>
+                            <span data-i18n="veterinarias.feat2">Recordatorios automáticos de citas</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded-full bg-pawgold flex items-center justify-center text-white text-sm">✓</span>
+                            <span data-i18n="veterinarias.feat3">Fidelización de clientes</span>
+                        </li>
+                    </ul>
+                    <p class="text-white font-medium mb-4" data-i18n="veterinarias.distribuidor_cta">Contáctanos para
+                        más información</p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/522218751050" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 text-pawgreen dark:text-pawmint px-6 py-3.5 rounded-2xl font-bold hover:shadow-lg hover:scale-105 transition-all w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                            </svg>
+                            <span data-i18n="veterinarias.btn_whatsapp">WhatsApp</span>
+                        </a>
+                        <!-- Email Button -->
+                        <a href="mailto:macedas856@gmail.com" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/50 dark:border-gray-600 text-white px-6 py-3.5 rounded-2xl font-bold hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span data-i18n="veterinarias.btn_email">Correo Electrónico</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- B2B Image -->
+                <div class="w-full lg:w-5/12">
+                    <div
+                        class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/20 transform hover:scale-105 transition-transform duration-500">
+                        <img src="img/imagen-b2b.png" alt="Programa Negocios Paw Tag"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (AEO Optimized) -->
+    <section id="faq" class="py-20 bg-pawbg dark:bg-pawbgdark transition-colors">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="faq.title">Preguntas Frecuentes</h2>
+                <p class="text-gray-600 dark:text-gray-400" data-i18n="faq.subtitle">Resolvemos tus dudas sobre el
+                    ecosistema Paw Tag.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details
+                    class="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                        <span data-i18n="faq.q1">¿Qué hace diferente a Paw Tag?</span>
+                        <span class="transition group-open:rotate-180 text-gray-400">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="faq.a1">
+                        Paw Tag no es solo un collar inteligente o una placa de identificación tradicional. Es un
+                        ecosistema completo enfocado en el bienestar de tu mascota que integra su historial médico,
+                        documentos y acceso a una comunidad activa de cuidadores responsables.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details
+                    class="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                        <span data-i18n="faq.q2">¿Cómo vinculo mi cuenta?</span>
+                        <span class="transition group-open:rotate-180 text-gray-400">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="faq.a2">
+                        Es muy sencillo: escanea tu nuevo Paw Tag con la cámara de tu celular, crea o inicia sesión en
+                        tu cuenta, y sigue los 3 pasos en pantalla para completar el perfil digital de tu mascota. No
+                        necesitas descargar apps pesadas.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details
+                    class="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                        <span data-i18n="faq.q3">¿Funciona en cualquier tipo de celular?</span>
+                        <span class="transition group-open:rotate-180 text-gray-400">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="faq.a3">
+                        Sí, funciona en el 99% de los smartphones actuales (iOS y Android) gracias a la tecnología NFC y
+                        Códigos QR integrados en nuestras medallas. Cualquier persona que encuentre a tu mascota podrá
+                        escanearla fácilmente.
+                    </div>
+                </details>
+                <!-- FAQ 4 -->
+                <details
+                    class="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                        <span data-i18n="faq.q4">¿Necesito recargar la batería de la medalla Paw Tag?</span>
+                        <span class="transition group-open:rotate-180 text-gray-400">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="faq.a4">
+                        No, no tendrás que preocuparte por cables ni por recordar cargarla cada semana. Paw Tag funciona
+                        con una batería de reloj estándar intercambiable que tiene una duración aproximada de un año.
+                        Cuando se agote, puedes reemplazarla tú mismo fácilmente por muy bajo costo.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details
+                    class="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                        <span data-i18n="faq.q5">¿Qué pasa exactamente cuando alguien escanea la placa de mi
+                            compañero?</span>
+                        <span class="transition group-open:rotate-180 text-gray-400">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="faq.a5">
+                        Si tu compañero llega a extraviarse, la persona que lo encuentre solo debe acercar su celular a
+                        la medalla. Al hacerlo, se abrirá instantáneamente una pantalla de emergencia en su navegador
+                        (pudiendo incluso mostrar un video tuyo dando instrucciones), mostrando únicamente tu
+                        información de contacto esencial y los datos médicos urgentes para facilitar un regreso a casa
+                        rápido y seguro.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pawtext dark:bg-black text-white pt-16 pb-8 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <img src="img/pawtag-wordmark.png" alt="Paw Tag wordmark"
+                            class="h-8 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="footer.brand_desc">
+                        Cuidado integral desde el amor y respeto para quienes nos alegran la vida.
+                    </p>
+                    <p class="text-sm font-semibold text-pawmint dark:text-teal-300" data-i18n="footer.geo">
+                        📍 Disponible para dueños responsables en todo el país.
+                    </p>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footer.ecosistema">Ecosistema</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_feat">Características</a></li>
+                        <li><a href="#" class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_vet">Para Negocios</a></li>
+                        <li><a href="#" class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_store">Tienda Oficial</a></li>
+                        <li><a href="activar.html"
+                                class="hover:text-pawgold dark:hover:text-yellow-400 transition-colors font-medium"
+                                data-i18n="footer.link_activate">Activa tu Tag</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footer.support">Soporte</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="https://youtube.com/shorts/pNTKm-VZmdA?si=M9nc5_omec4oQHWM" target="_blank"
+                                rel="noopener noreferrer"
+                                class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_help">Tutorial de configuración</a></li>
+                        <li><a href="#" class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_com">Comunidad</a></li>
+                        <li><a href="https://wa.me/522218751050" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                                data-i18n="footer.link_contact">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footer.follow">Síguenos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/pawtagmx/" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pawgreen dark:hover:bg-pawmintdark transition-colors text-white"
+                            aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61586531940468" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pawgreen dark:hover:bg-pawmintdark transition-colors text-white"
+                            aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@macedas.apps" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pawgreen dark:hover:bg-pawmintdark transition-colors text-white"
+                            aria-label="TikTok">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.81 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:macedas856@gmail.com"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pawgreen dark:hover:bg-pawmintdark transition-colors text-white"
+                            aria-label="Email">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legals -->
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p data-i18n="footer.rights">&copy; 2026 Paw Tag. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="https://macedas856.github.io/legal/politica_de_privacidad_paw_tag.pdf" target="_blank"
+                        rel="noopener noreferrer" class="hover:text-white transition-colors"
+                        data-i18n="footer.privacy">Políticas de
+                        Privacidad</a>
+                    <a href="https://macedas856.github.io/legal/terminos_y_condiciones_paw_tag.pdf" target="_blank"
+                        rel="noopener noreferrer" class="hover:text-white transition-colors"
+                        data-i18n="footer.terms">Términos de
+                        Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</body>
+
+</html>

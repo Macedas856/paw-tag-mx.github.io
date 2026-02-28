@@ -1,0 +1,107 @@
+{
+    "meta": {
+        "title": "Paw Tag | The companion safety and wellness ecosystem",
+        "description": "Protect your companion with Paw Tag. Access their location, medical history, and digital documents instantly. Join the community of responsible owners."
+    },
+    "nav": {
+        "brand": "Paw Tag",
+        "beneficios": "Benefits",
+        "como_funciona": "How it works",
+        "veterinarias": "Businesses",
+        "faq": "FAQ",
+        "activar": "Activate my Tag"
+    },
+    "hero": {
+        "badge": "The evolution of animal care",
+        "title_1": "The ",
+        "title_highlight": "safest",
+        "title_2": " bond for your best friend",
+        "subtitle": "It's not just a collar. It's a digital passport connecting medical history, location, and your unconditional love in a single tap.",
+        "btn_obtener": "Buy on TikTok Shop",
+        "btn_ya_tengo": "I already have one",
+        "vaccines": "Vaccines",
+        "up_to_date": "Up to date",
+        "product": "PRODUCT",
+        "price_info": "$349 MXN",
+        "btn_apple": "Download on the App Store",
+        "btn_android": "Get it on Google Play"
+    },
+    "beneficios": {
+        "title_1": "Everything that matters, ",
+        "title_highlight": "always with you",
+        "subtitle": "An ecosystem designed from respect and love, providing peace of mind in every moment of the day.",
+        "card1_title": "Quick Scan",
+        "card1_desc": "Whoever finds your companion only needs to bring their phone close to see your contact and location.",
+        "card2_title": "Medical History",
+        "card2_desc": "Vaccines, allergies, and treatments instantly accessible for any veterinary emergency.",
+        "card3_title": "Digital Docs",
+        "card3_desc": "Forget paperwork. Carry registration, insurance, and travel certificates in your pocket.",
+        "card4_title": "Active Community",
+        "card4_desc": "Connect with other responsible owners, discover pet-friendly parks, and receive neighborhood alerts."
+    },
+    "como_funciona": {
+        "title_1": "Getting started is ",
+        "title_highlight": "very simple",
+        "subtitle": "Advanced technology, designed to be intuitive.",
+        "step1_title": "Get your Tag",
+        "step1_desc": "Receive your smart tag with exclusive Paw Tag design.",
+        "step2_title": "Scan and Link",
+        "step2_desc": "Bring your phone close to the tag and create your companion's profile for free.",
+        "step3_title": "Total Security",
+        "step3_desc": "Place it on their collar. Their vital information is now protected."
+    },
+    "veterinarias": {
+        "badge": "B2B Partnership",
+        "title": "Do you own a pet-related business?",
+        "subtitle": "Join the official Paw Tag network. Clinics, hospitals, pet shops, grooming salons, daycares, and walkers: offer your clients the most advanced identification and give an added value to your services.",
+        "feat1": "Vaccination card digitization",
+        "feat2": "Automatic appointment reminders",
+        "feat3": "Customer loyalty",
+        "distribuidor_cta": "Contact us for more information",
+        "btn_whatsapp": "WhatsApp",
+        "btn_email": "Email",
+        "img_placeholder": "Veterinary / App Illustration"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "We answer your questions about the Paw Tag ecosystem.",
+        "q1": "What makes Paw Tag different?",
+        "a1": "Paw Tag goes far beyond a simple tracker; it's a complete ecosystem for responsible owners. In addition to tracking technology via a \"Proximity Network\" (similar to other high-end trackers), it includes a complete digital medical passport. From a single app, you can manage your companion's clinical history, save important documents, and connect with an active community, all designed from love and respect for their well-being.",
+        "q2": "How do I link my account?",
+        "a2": "The process is very intuitive and takes less than a couple of minutes. You just need to download our free mobile app and create your companion's digital profile. Then, simply bring your phone close to the physical tag for the NFC technology to detect it instantly. The tag and the app will be linked immediately.",
+        "q3": "Does it work on any type of phone?",
+        "a3": "Yes, the ecosystem is designed to be fully accessible. Scanning the tag works with any modern smartphone (iOS or Android) that has an integrated NFC reader. Whoever finds your companion does not need to have the app installed to read the tag and contact you.",
+        "q4": "Do I need to recharge the Paw Tag medal battery?",
+        "a4": "No, you won't have to worry about cables or remembering to charge it every week. Paw Tag works with a standard replaceable watch battery that lasts approximately one year. When it runs out, you can easily replace it yourself at a very low cost.",
+        "q5": "What exactly happens when someone scans my companion's tag?",
+        "a5": "If your companion ever gets lost, the person who finds them only needs to bring their phone close to the medal. Doing so will instantly open an emergency screen in their browser (potentially even showing a video of you giving instructions), displaying only your essential contact information and urgent medical data to facilitate a quick and safe return home."
+    },
+    "footer": {
+        "brand_desc": "Comprehensive care from love and respect for those who bring joy to our lives.",
+        "geo": "📍 Available in all Mexico. Soon all over LATAM.",
+        "ecosistema": "Ecosystem",
+        "link_feat": "Features",
+        "link_vet": "For Businesses",
+        "link_store": "TikTok Shop",
+        "link_activate": "Activate your Tag",
+        "support": "Support",
+        "link_help": "Setup Tutorial",
+        "link_com": "Community",
+        "link_contact": "Contact via WhatsApp",
+        "follow": "Follow us",
+        "rights": "© 2026 Paw Tag. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms and Conditions"
+    },
+    "activar": {
+        "meta_title": "Activate my Tag - Paw Tag",
+        "meta_desc": "Link your Paw Tag quickly to start protecting your companion's vital information.",
+        "welcome": "Welcome to the family!",
+        "subtitle": "Download the Paw Tag App to link and set up your best friend's vital information.",
+        "btn_vincular_apple": "Download on the App Store",
+        "btn_vincular_android": "Get it on Google Play",
+        "help_text": "Need help getting started?",
+        "help_link": "Watch step-by-step tutorial",
+        "rights": "© 2026 Paw Tag. Smart care."
+    }
+}
