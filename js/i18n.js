@@ -7,13 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 
     // Setup language switcher dropdown interaction
-    const langSelect = document.getElementById('language-select');
-    if (langSelect) {
-        langSelect.value = savedLang;
-        langSelect.addEventListener('change', (e) => {
+    const langSelects = document.querySelectorAll('#language-select, #mobile-language-select');
+    langSelects.forEach(select => {
+        select.value = savedLang;
+        select.addEventListener('change', (e) => {
+            // Keep all dropdowns in sync
+            langSelects.forEach(s => {
+                if (s !== e.target) s.value = e.target.value;
+            });
             setLanguage(e.target.value);
         });
-    }
+    });
 });
 
 /**

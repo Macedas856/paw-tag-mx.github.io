@@ -72,35 +72,29 @@
         <div
             class="max-w-md w-full bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700 p-8 md:p-10 text-center transition-colors">
 
-            <!-- Graphic Element -->
-            <div
-                class="w-24 h-24 bg-pawmint/40 dark:bg-pawmintdark/20 rounded-full mx-auto mb-8 flex items-center justify-center relative">
-                <div
-                    class="absolute inset-0 border-2 border-dashed border-pawgreen dark:border-pawmint rounded-full animate-[spin_10s_linear_infinite]">
-                </div>
-                <!-- Simbolizando un celular acercándose al tag -->
-                <svg class="w-10 h-10 text-pawgreen dark:text-pawmint z-10" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-                <div
-                    class="absolute -right-2 -top-2 w-8 h-8 bg-pawgold rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800 text-white transition-colors">
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                </div>
-            </div>
-
             <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight"
                 data-i18n="activar.welcome">
                 ¡Bienvenido a la familia!
             </h1>
 
-            <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg leading-relaxed" data-i18n="activar.subtitle">
+            <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed" data-i18n="activar.subtitle">
                 Estás a un paso de darle a tu mejor amigo el cuidado digital que merece.
             </p>
+
+            <!-- Video Tutorial Prominent (Vertical / Short) -->
+            <div
+                class="mb-6 w-full max-w-[260px] mx-auto rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[3px] border-pawgold/40 dark:border-pawgold/20 overflow-hidden relative group aspect-[9/16]">
+                <iframe class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/drk4JG1ZO1w?rel=0&modestbranding=1"
+                    title="Tutorial Paw Tag Localizador" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <h3 class="font-bold text-gray-800 dark:text-gray-200 text-lg mb-2" data-i18n="activar.video_title">Tutorial
+                de Configuración</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-10" data-i18n="activar.video_desc">Aprende paso a paso
+                cómo descargar la app, guardar los datos en NFC y vincular al radar de Apple y Google.</p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <a href="https://apps.apple.com/mx/app/paw-tag/id6739967090?l=en-GB" target="_blank"
@@ -118,20 +112,17 @@
             </div>
 
             <div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700 transition-colors">
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                    <span data-i18n="activar.help_text">¿Necesitas ayuda para empezar?</span> <br class="md:hidden">
-                    <a href="https://youtube.com/shorts/pNTKm-VZmdA?si=M9nc5_omec4oQHWM" target="_blank"
-                        rel="noopener noreferrer"
-                        class="font-medium text-pawgreen dark:text-pawmint hover:text-emerald-700 hover:underline inline-flex items-center gap-1"
+                <p class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-center gap-1">
+                    <span data-i18n="activar.help_text">¿Necesitas el manual de texto?</span>
+                    <a href="manual.html"
+                        class="font-medium text-pawgreen dark:text-pawmint hover:text-emerald-700 hover:underline inline-flex items-center gap-1 mt-1"
                         data-i18n="activar.help_link">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
                             </path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        Ver tutorial paso a paso
+                        Ver manual del usuario
                     </a>
                 </p>
             </div>
@@ -140,7 +131,11 @@
     </main>
 
     <!-- Minimal Footer -->
-    <footer class="w-full text-center py-6 text-sm text-gray-400 dark:text-gray-500">
+    <footer class="w-full text-center py-6 text-sm text-gray-400 dark:text-gray-500 flex flex-col items-center gap-2">
+        <div class="flex gap-4 mb-2">
+            <a href="manual.html" class="hover:text-pawgreen dark:hover:text-pawmint transition-colors"
+                data-i18n="manual.title">Manual de Usuario</a>
+        </div>
         <p data-i18n="activar.rights">&copy; 2026 Paw Tag. Cuidado inteligente.</p>
     </footer>
 

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="manual.meta_title">Manual de Usuario - Paw Tag</title>
+    <meta name="description"
+        content="Instrucciones de configuración, uso y preguntas frecuentes del Paw Tag modelo Loshall."
+        data-i18n="manual.meta_desc">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/pawtag-icon.png">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-config.js"></script>
+</head>
+
+<body
+    class="bg-pawbg dark:bg-pawbgdark text-pawtext dark:text-pawtextdark font-sans antialiased min-h-screen flex flex-col transition-colors">
+
+    <!-- Navbar -->
+    <nav
+        class="w-full bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="img/pawtag-logo.png" alt="Paw Tag logo oficial" class="h-10 w-auto">
+                </a>
+            </div>
+
+            <!-- Controls (Language, Theme) -->
+            <div class="flex items-center gap-3">
+                <!-- Language Switcher -->
+                <select id="language-select"
+                    class="bg-transparent text-sm font-medium text-pawtext dark:text-pawtextdark border-none focus:ring-0 cursor-pointer outline-none p-1">
+                    <option value="es" class="text-black">ES</option>
+                    <option value="en" class="text-black">EN</option>
+                    <option value="pt" class="text-black">PT</option>
+                </select>
+
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-12">
+
+            <!-- Header Section -->
+            <div class="text-center relative">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight"
+                    data-i18n="manual.title">
+                    Manual de Usuario
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400 mb-6" data-i18n="manual.subtitle">
+                    Guía rápida para configurar tu Paw Tag
+                </p>
+                <div
+                    class="inline-flex items-center gap-2 bg-pawgreen/10 dark:bg-pawmint/10 text-pawgreen dark:text-pawmint px-4 py-2 rounded-full font-semibold border border-pawgreen/20 dark:border-pawmint/30">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
+                    <span data-i18n="manual.model_tag">Modelo: Loshall</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-3 max-w-lg mx-auto" data-i18n="manual.model_note">
+                    Estas instrucciones son exclusivas para el modelo Loshall. Si tienes otro modelo, consulta el manual
+                    específico.
+                </p>
+            </div>
+
+            <!-- Compatibilidad Dual -->
+            <section
+                class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-pawgold/20 rounded-xl flex items-center justify-center text-pawgold">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                    </div>
+                    <span data-i18n="manual.compatibility_title">Compatibilidad Dual</span>
+                </h2>
+
+                <div
+                    class="mb-6 flex gap-3 text-sm text-blue-800 dark:text-blue-200 bg-blue-50 dark:bg-blue-900/30 p-4 rounded-xl items-start">
+                    <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <p data-i18n="manual.android_req" class="font-medium">Compatible solo con Android 9+. No soporta
+                            dispositivos Huawei.</p>
+                        <p data-i18n="manual.locked_note" class="mt-1 opacity-80">Una vez emparejado, el tag se bloquea
+                            a esa cuenta.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div
+                        class="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-2xl border border-gray-200 dark:border-gray-700">
+                        <div class="bg-black p-2 rounded-lg">
+                            <img src="img/logotipo-de-apple.png" alt="Apple" class="w-6 h-6 object-contain invert">
+                        </div>
+                        <span class="font-medium" data-i18n="manual.apple_find_my">Funciona con Apple Find My</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-2xl border border-gray-200 dark:border-gray-700">
+                        <div class="bg-green-600 p-2 rounded-lg">
+                            <img src="img/google-play.png" alt="Android" class="w-6 h-6 object-contain">
+                        </div>
+                        <span class="font-medium" data-i18n="manual.android_find_hub">Funciona con Android Find
+                            Hub</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid de Instrucciones de S.O. -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Apple / iOS -->
+                <section
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+                    <!-- Decoración Apple -->
+                    <div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+                        <img src="img/logotipo-de-apple.png" alt="" class="w-32 h-32 invert dark:invert-0">
+                    </div>
+
+                    <h2 class="text-2xl font-bold mb-6 text-black dark:text-white" data-i18n="manual.ios_title">
+                        Instrucciones Rápidas para iOS
+                    </h2>
+                    <ul class="space-y-6 relative border-l-2 border-gray-200 dark:border-gray-700 ml-3">
+                        <!-- Step 1 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step1_title">1. Encender tu Paw Tag</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step1_desc">Presione
+                                rápidamente el botón y escuchará un sonido indiciando que está encendido.</p>
+                        </li>
+                        <!-- Step 2 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step2_title">2. Emparejar</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step2_desc">Abra la
+                                app <strong>Find My</strong>. Vaya a 'Artículos' > '+ Añadir Artículo' > 'Añadir otro
+                                artículo'. Acérquelo a su iPhone y toque 'Conectar'. Nombre su Tag (ej. Firulais).</p>
+                        </li>
+                        <!-- Step 3 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step3_title">3. Activar Modo Perdido
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step3_desc">En la
+                                app, seleccione su Tag y toque 'Activar' bajo 'Modo Perdido'. Ingrese un número de
+                                teléfono y un mensaje como 'Ayuda a mi perro a volver a casa'.</p>
+                        </li>
+                        <!-- Step 4 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step4_title">4. Eliminar el Paw Tag</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step4_desc">En
+                                'Artículos', seleccione su Tag, toque 'Eliminar artículo' y confirme. <em>Nota: El Tag
+                                    se apagará y entrará en modo de emparejamiento nuevamente.</em></p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Android -->
+                <section
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+                    <!-- Decoración Android -->
+                    <div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+                        <img src="img/google-play.png" alt="" class="w-32 h-32 grayscale brightness-0 dark:invert">
+                    </div>
+
+                    <h2 class="text-2xl font-bold mb-6 text-green-700 dark:text-green-400"
+                        data-i18n="manual.android_title">
+                        Instrucciones Rápidas para Android
+                    </h2>
+                    <ul class="space-y-6 relative border-l-2 border-green-200 dark:border-green-900 ml-3">
+                        <!-- Step 1 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_prep">
+                                <strong>Preparación:</strong> Encienda Bluetooth y su red. Mantenga presionado el botón
+                                del Tag 3 segundos. Abra la configuración de su teléfono.
+                            </p>
+                        </li>
+                        <!-- Step 2 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_pair">
+                                <strong>Emparejar rápido:</strong> Acerque el Tag a su Android y espere la ventana
+                                emergente.
+                            </p>
+                        </li>
+                        <!-- Step 3 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_config">
+                                <strong>Configurar:</strong> Toque 'Conectar' y siga las indicaciones. En la app
+                                <strong>Find Hub</strong>, nombre y categorice su Paw Tag.
+                            </p>
+                        </li>
+                        <!-- Step 4 -->
+                        <li class="pl-6 relative">
+                            <div
+                                class="absolute w-5 h-5 bg-gray-300 dark:bg-gray-600 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-500 text-sm" data-i18n="manual.android_manual">
+                                <strong>Emparejamiento Manual:</strong> Si no ve el pop-up: Ajustes > Google > Todos los
+                                servicios > Dispositivos conectados > Dispositivos > Activar 'Buscar dispositivos
+                                cercanos' > Seleccione el Tag en la lista.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Controles y Funciones Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Botones -->
+                <section
+                    class="bg-pawmint/10 border-pawmint/20 dark:bg-pawmintdark/10 dark:border-pawmintdark/20 rounded-3xl p-8 border">
+                    <h2 class="text-2xl font-bold mb-6 text-pawgreen dark:text-pawmint flex items-center gap-3">
+                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                        </svg>
+                        <span data-i18n="manual.buttons_title">Control de Botones</span>
+                    </h2>
+                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+                        <li class="flex gap-3">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">▶</span>
+                            <span data-i18n="manual.btn_on"><strong>Encender:</strong> Mantenga presionado 3 segundos.
+                                Escuchará un sonido.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">⏸</span>
+                            <span data-i18n="manual.btn_off"><strong>Apagar:</strong> Presione rápido 4-5 veces, luego
+                                mantenga presionado por 3 segundos.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">ⓘ</span>
+                            <span data-i18n="manual.btn_status"><strong>Confirmar estado:</strong> Doble clic. Si suena
+                                un pitido, está funcionando; si no, enciéndalo (3 segundos).</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">↺</span>
+                            <span data-i18n="manual.btn_reset"><strong>Restablecer:</strong> Estando encendido, presione
+                                5 veces, manteniendo la 5ta vez hasta escuchar una melodía.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Funciones Principales -->
+                <section
+                    class="bg-gray-50 dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <svg class="w-8 h-8 text-pawtext dark:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                        <span data-i18n="manual.features_title">Funciones Principales</span>
+                    </h2>
+                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
+                            data-i18n="manual.feat_locate">
+                            <strong>Localizar (Find My):</strong> Rastreable a través de cientos de millones de
+                            dispositivos globalmente de forma anónima y encriptada.
+                        </li>
+                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
+                            data-i18n="manual.feat_sound">
+                            <strong>Reproducir Sonido:</strong> Use la app para hacer sonar el Tag si su mascota se
+                            escondió cerca.
+                        </li>
+                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
+                            data-i18n="manual.feat_alerts">
+                            <strong>Notificaciones:</strong> Active 'Notificar cuando se quede atrás' o 'Notificar
+                            cuando se encuentre' para alertas útiles.
+                        </li>
+                        <li class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800"
+                            data-i18n="manual.feat_simultaneous">
+                            <strong>Restricción:</strong> Puede usarse on Apple o Android, pero <strong>NO
+                                simultáneamente</strong>. Activar una red deshabilita la otra.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- FAQ y Solución de problemas -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Tips / Troubleshooting -->
+                <section
+                    class="bg-pawmint/10 dark:bg-pawmintdark/10 rounded-3xl p-8 border border-pawmint/20 dark:border-pawmintdark/20 flex flex-col justify-center h-full">
+                    <h2 class="text-2xl font-bold mb-6 text-pawgreen dark:text-pawmint flex items-center gap-3">
+                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        <span data-i18n="manual.tips_title">Solución de Problemas (Tips)</span>
+                    </h2>
+                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+                        <li class="flex gap-3 items-start">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
+                            <span data-i18n="manual.tip_network">Si el emparejamiento falla (error de red o servidor),
+                                intente alternar entre Wi-Fi y Datos Celulares.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
+                            <span data-i18n="manual.tip_timeout"><strong>Tiempo de espera:</strong> Si el Tag es
+                                eliminado de la app, entrará en modo emparejamiento por 10 min.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
+                            <span data-i18n="manual.tip_reset"><strong>Restablecimiento a Fábrica Alternativo:</strong>
+                                Con el equipo encendido, presione el botón 5 veces seguidas, manteniendo presionado la
+                                última.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- FAQ -->
+                <section
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
+                    <h2 class="text-2xl font-bold mb-6 text-center" data-i18n="manual.faq_title">Preguntas Frecuentes -
+                        Manual</h2>
+                    <div class="space-y-4">
+                        <details
+                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                                <span data-i18n="manual.faq_privacy_q">¿Cómo se protege mi privacidad?</span>
+                                <span class="transition group-open:rotate-180 text-gray-400">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed"
+                                data-i18n="manual.faq_privacy_a">
+                                Solo usted puede ver su tag. Los datos de ubicación nunca se almacenan en la medalla, y
+                                la
+                                red está encriptada paso a paso.
+                            </div>
+                        </details>
+                        <details
+                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                                <span data-i18n="manual.faq_tracking_q">¿Cómo evita el rastreo no deseado?</span>
+                                <span class="transition group-open:rotate-180 text-gray-400">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed"
+                                data-i18n="manual.faq_tracking_a">
+                                Si un Tag desconocido se mueve con usted, recibirá una notificación (o el dispositivo
+                                sonará
+                                si no tiene smartphone).
+                            </div>
+                        </details>
+                        <!-- NEW DISTANCE FAQ -->
+                        <details
+                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
+                                <span data-i18n="manual.faq_distance_q">¿Cuál es el alcance o la distancia que tiene Paw
+                                    Tag?</span>
+                                <span class="transition group-open:rotate-180 text-gray-400">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed space-y-2"
+                                data-i18n="[html]manual.faq_distance_a">
+                                ¡Paw Tag no tiene un límite de distancia máximo! Su tecnología protege a tu mascota en
+                                tres niveles:<br><br><strong>Rango Global:</strong> Usa la "Red de Cercanía"
+                                (Apple/Google). Si tu mascota se aleja, cualquier smartphone que pase cerca actualizará
+                                su ubicación en tu mapa de forma anónima y segura.<br><strong>Rango Corto (Hasta
+                                    15m):</strong> Si está cerca, usa Bluetooth para hacer sonar la medalla y
+                                encontrarla rápidamente.<br><strong>Rango de Contacto (NFC):</strong> Si alguien la
+                                encuentra, solo debe escanear la placa con su celular para ver tu número de emergencia.
+                            </div>
+                        </details>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Safety Warnings -->
+            <section
+                class="bg-red-50 dark:bg-red-900/30 rounded-3xl p-8 border border-red-200 dark:border-red-800 relative shadow-inner">
+                <div class="absolute top-8 right-8 text-red-500 opacity-20">
+                    <svg class="w-24 h-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-6 text-red-700 dark:text-red-400 flex items-center gap-3">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span data-i18n="manual.warnings_title">Advertencias de Seguridad</span>
+                </h2>
+                <div class="space-y-4 relative z-10 text-red-900 dark:text-red-200 font-medium">
+                    <div class="flex gap-4 items-start bg-white/50 dark:bg-black/20 p-4 rounded-xl">
+                        <div class="mt-1">⚠️</div>
+                        <p data-i18n="manual.warning_choking"><strong>Peligro de asfixia y quemaduras:</strong> Contiene
+                            una batería de botón tipo moneda.</p>
+                    </div>
+                    <div class="flex gap-4 items-start bg-white/50 dark:bg-black/20 p-4 rounded-xl">
+                        <div class="mt-1">🚫</div>
+                        <p data-i18n="manual.warning_kids">Mantenga las baterías de repuesto y el Tag desmontado fuera
+                            del alcance de los niños.</p>
+                    </div>
+                    <div
+                        class="flex gap-4 items-start bg-red-100 dark:bg-red-900/50 p-4 rounded-xl border border-red-300 dark:border-red-700">
+                        <div class="mt-1 text-red-600 dark:text-red-400 text-xl">⚕️</div>
+                        <p data-i18n="manual.warning_medical"><strong>No ingiera la batería.</strong> Si sospecha
+                            ingestión, busque atención médica DE INMEDIATO; puede causar quemaduras graves o la muerte
+                            en 2 horas.</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer
+        class="w-full text-center py-8 text-sm text-gray-400 dark:text-gray-500 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 transition-colors mt-auto">
+        <p data-i18n="manual.rights">&copy; 2026 Paw Tag. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</body>
+
+</html>
