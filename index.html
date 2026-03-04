@@ -477,6 +477,39 @@
         </div>
     </section>
 
+    <!-- Puntos de Venta Físicos -->
+    <section id="puntos-venta"
+        class="py-20 bg-gray-50 dark:bg-gray-900/50 transition-colors border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-i18n="puntos_venta.title_1">¿Prefieres comprarlo </span><span
+                        class="text-pawgreen dark:text-pawmint" data-i18n="puntos_venta.title_highlight">en
+                        persona?</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg mb-8"
+                    data-i18n="puntos_venta.subtitle">Si no quieres esperar el envío o prefieres ver el producto antes
+                    de comprar, visita alguno de nuestros puntos de venta oficiales.</p>
+                <button id="btn-locate-user"
+                    class="inline-flex items-center justify-center bg-white dark:bg-gray-800 text-pawtext dark:text-white border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-semibold hover:border-pawgreen dark:hover:border-pawmint hover:text-pawgreen transition-all shadow-sm">
+                    <svg class="w-5 h-5 mr-2 text-pawgreen dark:text-pawmint" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span data-i18n="puntos_venta.btn_locate">Mostrar tiendas más cercanas</span>
+                </button>
+            </div>
+
+            <!-- Contenedor Grid Dinámico -->
+            <div id="stores-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Renderizado vía JS -->
+            </div>
+        </div>
+    </section>
+
     <!-- Sección B2B (Veterinarias) -->
     <section id="veterinarias" class="py-24 bg-pawgreen dark:bg-pawmintdark relative overflow-hidden transition-colors">
         <!-- Texturas de fondo -->
@@ -780,6 +813,7 @@
 
     <!-- App Scripts -->
     <script src="js/main.js" defer></script>
+    <script src="js/stores.js" defer></script>
     <script src="js/i18n.js" defer></script>
 </body>
 
