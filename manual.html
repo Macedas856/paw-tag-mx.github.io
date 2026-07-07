@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="manual.meta_title">Manual de Usuario - Paw Tag</title>
     <meta name="description"
-        content="Instrucciones de configuración, uso y preguntas frecuentes del Paw Tag modelo Loshall."
+        content="Instrucciones de configuración, uso y preguntas frecuentes del nuevo Paw Tag (Wireless Tag)."
         data-i18n="manual.meta_desc">
 
     <!-- Favicon -->
@@ -81,16 +81,16 @@
 
     <!-- Main Content -->
     <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto space-y-12">
+        <div class="max-w-7xl mx-auto space-y-12">
 
             <!-- Header Section -->
-            <div class="text-center relative">
+            <div class="text-center relative max-w-3xl mx-auto">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight"
                     data-i18n="manual.title">
                     Manual de Usuario
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-400 mb-6" data-i18n="manual.subtitle">
-                    Guía rápida para configurar tu Paw Tag
+                    Guía de configuración para la nueva versión de Paw Tag
                 </p>
                 <div
                     class="inline-flex items-center gap-2 bg-pawgreen/10 dark:bg-pawmint/10 text-pawgreen dark:text-pawmint px-4 py-2 rounded-full font-semibold border border-pawgreen/20 dark:border-pawmint/30">
@@ -98,17 +98,16 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                     </svg>
-                    <span data-i18n="manual.model_tag">Modelo: Loshall</span>
+                    <span data-i18n="manual.model_tag">Modelo: Wireless Tag</span>
                 </div>
                 <p class="text-sm text-gray-500 mt-3 max-w-lg mx-auto" data-i18n="manual.model_note">
-                    Estas instrucciones son exclusivas para el modelo Loshall. Si tienes otro modelo, consulta el manual
-                    específico.
+                    Estas instrucciones son para la nueva versión (Wireless Tag) con soporte para Google Find Hub y Apple Find My.
                 </p>
             </div>
 
             <!-- Compatibilidad Dual -->
             <section
-                class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+                class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
                     <div class="w-10 h-10 bg-pawgold/20 rounded-xl flex items-center justify-center text-pawgold">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,361 +125,361 @@
                             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                        <p data-i18n="manual.android_req" class="font-medium">Compatible solo con Android 9+. No soporta
-                            dispositivos Huawei.</p>
-                        <p data-i18n="manual.locked_note" class="mt-1 opacity-80">Una vez emparejado, el tag se bloquea
-                            a esa cuenta.</p>
+                        <p data-i18n="manual.android_req" class="font-medium font-semibold">Compatible solo con Android 9+. No soporta dispositivos Huawei.</p>
+                        <p data-i18n="manual.locked_note" class="mt-1 opacity-80">Una vez emparejado, el tag se bloquea a esa cuenta.</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div
                         class="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-2xl border border-gray-200 dark:border-gray-700">
                         <div class="bg-black p-2 rounded-lg">
                             <img src="img/logotipo-de-apple.png" alt="Apple" class="w-6 h-6 object-contain invert">
                         </div>
-                        <span class="font-medium" data-i18n="manual.apple_find_my">Funciona con Apple Find My</span>
+                        <span class="font-medium" data-i18n="manual.apple_find_my">Works with Apple Find My</span>
                     </div>
                     <div
                         class="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-2xl border border-gray-200 dark:border-gray-700">
                         <div class="bg-green-600 p-2 rounded-lg">
                             <img src="img/google-play.png" alt="Android" class="w-6 h-6 object-contain">
                         </div>
-                        <span class="font-medium" data-i18n="manual.android_find_hub">Funciona con Android Find
-                            Hub</span>
+                        <span class="font-medium" data-i18n="manual.android_find_hub">Works with Google Find Hub</span>
+                    </div>
+                </div>
+
+                <!-- Diagrama del Botón -->
+                <div class="border-t border-gray-100 dark:border-gray-700 pt-8 text-center">
+                    <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-gray-200" data-i18n="manual.diag_button_alt">Diagrama de botones y altavoz</h3>
+                    <div class="max-w-md mx-auto overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white p-4">
+                        <img src="img/manual-diagrama-boton.png" alt="Diagrama de Paw Tag" data-i18n="[alt]manual.diag_button_alt" class="w-full h-auto object-contain dark:invert">
                     </div>
                 </div>
             </section>
 
             <!-- Grid de Instrucciones de S.O. -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
                 <!-- Apple / iOS -->
                 <section
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden flex flex-col">
                     <!-- Decoración Apple -->
                     <div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
                         <img src="img/logotipo-de-apple.png" alt="" class="w-32 h-32 invert dark:invert-0">
                     </div>
 
-                    <h2 class="text-2xl font-bold mb-6 text-black dark:text-white" data-i18n="manual.ios_title">
-                        Instrucciones Rápidas para iOS
+                    <h2 class="text-2xl font-bold mb-6 text-black dark:text-white flex items-center gap-2 border-b border-gray-100 dark:border-gray-700 pb-4" data-i18n="manual.ios_title">
+                        Apple Manual (Apple Find My)
                     </h2>
-                    <ul class="space-y-6 relative border-l-2 border-gray-200 dark:border-gray-700 ml-3">
-                        <!-- Step 1 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+
+                    <div class="space-y-8 flex-grow">
+                        <!-- 1. Getting Started -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.ios_sec1_title">1. Getting Started</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed" data-i18n="manual.ios_sec1_desc">To prevent accidental shutdowns...</p>
+                            
+                            <div class="ml-4 space-y-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.ios_sec1_1_title">1.1 Power On / Off</h4>
+                                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 text-xs mt-1 space-y-1">
+                                        <li data-i18n="manual.ios_sec1_1_1">Power On...</li>
+                                        <li data-i18n="manual.ios_sec1_1_2">Power Off...</li>
+                                    </ul>
+                                    <p class="text-xs text-amber-600 dark:text-amber-400 italic mt-2" data-i18n="manual.ios_sec1_1_remark">Remark: Setting a shutdown timer...</p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.ios_sec1_2_title">1.2 Check For Updates</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-xs mt-1 leading-relaxed" data-i18n="manual.ios_sec1_2_desc">To use Find My app...</p>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step1_title">1. Encender tu Paw Tag</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step1_desc">Presione
-                                rápidamente el botón y escuchará un sonido indiciando que está encendido.</p>
-                        </li>
-                        <!-- Step 2 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                        </div>
+
+                        <!-- 2. Add Your Locator -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.ios_sec2_title">2. Add Your Locator</h3>
+                            
+                            <div class="ml-4 space-y-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.ios_sec2_1_title">2.1 Start the App</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-xs mt-1" data-i18n="manual.ios_sec2_1_desc">Open app, allow notifications.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.ios_sec2_2_title">2.2 Connect your Locator</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-xs mt-1 leading-relaxed" data-i18n="manual.ios_sec2_2_desc">Power on, select items...</p>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step2_title">2. Emparejar</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step2_desc">Abra la
-                                app <strong>Find My</strong>. Vaya a 'Artículos' > '+ Añadir Artículo' > 'Añadir otro
-                                artículo'. Acérquelo a su iPhone y toque 'Conectar'. Nombre su Tag (ej. Firulais).</p>
-                        </li>
-                        <!-- Step 3 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                        </div>
+
+                        <!-- 3. Function Introduction -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-3" data-i18n="manual.ios_sec3_title">3. Function Introduction</h3>
+                            <ul class="space-y-4 text-xs text-gray-600 dark:text-gray-400 ml-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_1_title">3.1 Locate Your Item</strong>
+                                    <span data-i18n="manual.ios_sec3_1_desc">Play sound...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_2_title">3.2 Notifications</strong>
+                                    <span data-i18n="manual.ios_sec3_2_desc">Left behind alert...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_3_title">3.3 Share Items</strong>
+                                    <span data-i18n="manual.ios_sec3_3_desc">Share with friends...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_4_title">3.4 Lost Mode</strong>
+                                    <span data-i18n="manual.ios_sec3_4_desc">Enable lost mode...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_5_title">3.5 Remove Item</strong>
+                                    <span data-i18n="manual.ios_sec3_5_desc">Remove in app...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_6_title">3.6 Factory Reset Your Locator</strong>
+                                    <span data-i18n="manual.ios_sec3_6_desc">Restore settings...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.ios_sec3_7_title">3.7 Unwanted Tracking Detection</strong>
+                                    <span data-i18n="manual.ios_sec3_7_desc">Antiharrasing alert...</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 4. Specifications -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.ios_sec4_title">4. Specifications</h3>
+                            <div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-2xl border border-gray-150 dark:border-gray-750 text-xs text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="[html]manual.ios_sec4_desc">
+                                Battery capacity, buzzer db...
                             </div>
-                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step3_title">3. Activar Modo Perdido
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step3_desc">En la
-                                app, seleccione su Tag y toque 'Activar' bajo 'Modo Perdido'. Ingrese un número de
-                                teléfono y un mensaje como 'Ayuda a mi perro a volver a casa'.</p>
-                        </li>
-                        <!-- Step 4 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-black rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
+                        </div>
+
+                        <!-- 5. Alternative Button Functions (Summary) -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.ios_sec5_title">5. Alternative Button Functions (Summary)</h3>
+                            <ul class="space-y-2 text-xs text-gray-600 dark:text-gray-400 ml-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <li data-i18n="[html]manual.ios_sec5_1">Power on...</li>
+                                <li data-i18n="[html]manual.ios_sec5_2">Power off...</li>
+                                <li data-i18n="[html]manual.ios_sec5_3">Learn more...</li>
+                                <li data-i18n="[html]manual.ios_sec5_4">Reset...</li>
+                            </ul>
+                        </div>
+
+                        <!-- 7. iOS FAQ -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-3" data-i18n="manual.ios_sec7_title">7. FAQ</h3>
+                            <div class="space-y-4 ml-4">
+                                <div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                                    <strong class="block text-xs text-gray-800 dark:text-gray-200 mb-1" data-i18n="manual.ios_sec7_q1">Why is location not updating?</strong>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="manual.ios_sec7_a1">Anonymously reports...</p>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                                    <strong class="block text-xs text-gray-800 dark:text-gray-200 mb-1" data-i18n="manual.ios_sec7_q2">Pairing fails with Find My app</strong>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="manual.ios_sec7_a2">Try switching networks...</p>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-lg" data-i18n="manual.ios_step4_title">4. Eliminar el Paw Tag</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-1" data-i18n="manual.ios_step4_desc">En
-                                'Artículos', seleccione su Tag, toque 'Eliminar artículo' y confirme. <em>Nota: El Tag
-                                    se apagará y entrará en modo de emparejamiento nuevamente.</em></p>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </section>
 
-                <!-- Android -->
+                <!-- Android / Find Hub -->
                 <section
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden flex flex-col">
                     <!-- Decoración Android -->
                     <div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
                         <img src="img/google-play.png" alt="" class="w-32 h-32 grayscale brightness-0 dark:invert">
                     </div>
 
-                    <h2 class="text-2xl font-bold mb-6 text-green-700 dark:text-green-400"
-                        data-i18n="manual.android_title">
-                        Instrucciones Rápidas para Android
+                    <h2 class="text-2xl font-bold mb-6 text-green-700 dark:text-green-400 flex items-center gap-2 border-b border-gray-100 dark:border-gray-700 pb-4" data-i18n="manual.android_title">
+                        Android Manual (Google Find Hub)
                     </h2>
-                    <ul class="space-y-6 relative border-l-2 border-green-200 dark:border-green-900 ml-3">
-                        <!-- Step 1 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_prep">
-                                <strong>Preparación:</strong> Encienda Bluetooth y su red. Mantenga presionado el botón
-                                del Tag 3 segundos. Abra la configuración de su teléfono.
+
+                    <div class="space-y-8 flex-grow">
+                        <!-- 1. Log in Google Find Hub APP -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.android_sec1_title">1. Log in Google Find Hub APP</h3>
+                            <ul class="list-decimal list-inside text-xs text-gray-600 dark:text-gray-400 space-y-2 ml-4">
+                                <li data-i18n="manual.android_sec1_step1">Search app...</li>
+                                <li data-i18n="manual.android_sec1_step2">Install or update...</li>
+                                <li data-i18n="manual.android_sec1_step3">Open app...</li>
+                                <li data-i18n="manual.android_sec1_step4">Log in Google...</li>
+                                <li data-i18n="manual.android_sec1_step5">Permissions...</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. Power on -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.android_sec2_title">2. Power on</h3>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed ml-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4" data-i18n="manual.android_sec2_desc">
+                                Holdcircular button 3s...
                             </p>
-                        </li>
-                        <!-- Step 2 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_pair">
-                                <strong>Emparejar rápido:</strong> Acerque el Tag a su Android y espere la ventana
-                                emergente.
-                            </p>
-                        </li>
-                        <!-- Step 3 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-green-500 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400" data-i18n="manual.android_config">
-                                <strong>Configurar:</strong> Toque 'Conectar' y siga las indicaciones. En la app
-                                <strong>Find Hub</strong>, nombre y categorice su Paw Tag.
-                            </p>
-                        </li>
-                        <!-- Step 4 -->
-                        <li class="pl-6 relative">
-                            <div
-                                class="absolute w-5 h-5 bg-gray-300 dark:bg-gray-600 rounded-full -left-[11px] top-1 border-4 border-white dark:border-gray-800">
-                            </div>
-                            <p class="text-gray-500 dark:text-gray-500 text-sm" data-i18n="manual.android_manual">
-                                <strong>Emparejamiento Manual:</strong> Si no ve el pop-up: Ajustes > Google > Todos los
-                                servicios > Dispositivos conectados > Dispositivos > Activar 'Buscar dispositivos
-                                cercanos' > Seleccione el Tag en la lista.
-                            </p>
-                        </li>
-                    </ul>
-                </section>
-            </div>
+                        </div>
 
-            <!-- Controles y Funciones Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Botones -->
-                <section
-                    class="bg-pawmint/10 border-pawmint/20 dark:bg-pawmintdark/10 dark:border-pawmintdark/20 rounded-3xl p-8 border">
-                    <h2 class="text-2xl font-bold mb-6 text-pawgreen dark:text-pawmint flex items-center gap-3">
-                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                        </svg>
-                        <span data-i18n="manual.buttons_title">Control de Botones</span>
-                    </h2>
-                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li class="flex gap-3">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">▶</span>
-                            <span data-i18n="manual.btn_on"><strong>Encender:</strong> Mantenga presionado 3 segundos.
-                                Escuchará un sonido.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">⏸</span>
-                            <span data-i18n="manual.btn_off"><strong>Apagar:</strong> Presione rápido 4-5 veces, luego
-                                mantenga presionado por 3 segundos.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">ⓘ</span>
-                            <span data-i18n="manual.btn_status"><strong>Confirmar estado:</strong> Doble clic. Si suena
-                                un pitido, está funcionando; si no, enciéndalo (3 segundos).</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">↺</span>
-                            <span data-i18n="manual.btn_reset"><strong>Restablecer:</strong> Estando encendido, presione
-                                5 veces, manteniendo la 5ta vez hasta escuchar una melodía.</span>
-                        </li>
-                    </ul>
-                </section>
+                        <!-- 3. Connect to Find Hub app -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.android_sec3_title">3. Connect to Find Hub app</h3>
+                            <ul class="list-disc list-inside text-xs text-gray-600 dark:text-gray-400 space-y-2 ml-4">
+                                <li data-i18n="manual.android_sec3_step1">Bluetooth on...</li>
+                                <li data-i18n="manual.android_sec3_step2">Bring close, wait pop-up...</li>
+                            </ul>
+                        </div>
 
-                <!-- Funciones Principales -->
-                <section
-                    class="bg-gray-50 dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700">
-                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <svg class="w-8 h-8 text-pawtext dark:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                        </svg>
-                        <span data-i18n="manual.features_title">Funciones Principales</span>
-                    </h2>
-                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
-                            data-i18n="manual.feat_locate">
-                            <strong>Localizar (Find My):</strong> Rastreable a través de cientos de millones de
-                            dispositivos globalmente de forma anónima y encriptada.
-                        </li>
-                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
-                            data-i18n="manual.feat_sound">
-                            <strong>Reproducir Sonido:</strong> Use la app para hacer sonar el Tag si su mascota se
-                            escondió cerca.
-                        </li>
-                        <li class="bg-white dark:bg-gray-900 p-3 rounded-xl border border-gray-100 dark:border-gray-700"
-                            data-i18n="manual.feat_alerts">
-                            <strong>Notificaciones:</strong> Active 'Notificar cuando se quede atrás' o 'Notificar
-                            cuando se encuentre' para alertas útiles.
-                        </li>
-                        <li class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800"
-                            data-i18n="manual.feat_simultaneous">
-                            <strong>Restricción:</strong> Puede usarse on Apple o Android, pero <strong>NO
-                                simultáneamente</strong>. Activar una red deshabilita la otra.
-                        </li>
-                    </ul>
-                </section>
-            </div>
-
-            <!-- FAQ y Solución de problemas -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-                <!-- Tips / Troubleshooting -->
-                <section
-                    class="bg-pawmint/10 dark:bg-pawmintdark/10 rounded-3xl p-8 border border-pawmint/20 dark:border-pawmintdark/20 flex flex-col justify-center h-full">
-                    <h2 class="text-2xl font-bold mb-6 text-pawgreen dark:text-pawmint flex items-center gap-3">
-                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                        <span data-i18n="manual.tips_title">Solución de Problemas (Tips)</span>
-                    </h2>
-                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li class="flex gap-3 items-start">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
-                            <span data-i18n="manual.tip_network">Si el emparejamiento falla (error de red o servidor),
-                                intente alternar entre Wi-Fi y Datos Celulares.</span>
-                        </li>
-                        <li class="flex gap-3 items-start">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
-                            <span data-i18n="manual.tip_timeout"><strong>Tiempo de espera:</strong> Si el Tag es
-                                eliminado de la app, entrará en modo emparejamiento por 10 min.</span>
-                        </li>
-                        <li class="flex gap-3 items-start">
-                            <span class="text-pawgreen dark:text-pawmint mt-1">✓</span>
-                            <span data-i18n="manual.tip_reset"><strong>Restablecimiento a Fábrica Alternativo:</strong>
-                                Con el equipo encendido, presione el botón 5 veces seguidas, manteniendo presionado la
-                                última.</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- FAQ -->
-                <section
-                    class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
-                    <h2 class="text-2xl font-bold mb-6 text-center" data-i18n="manual.faq_title">Preguntas Frecuentes -
-                        Manual</h2>
-                    <div class="space-y-4">
-                        <details
-                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
-                            <summary
-                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
-                                <span data-i18n="manual.faq_privacy_q">¿Cómo se protege mi privacidad?</span>
-                                <span class="transition group-open:rotate-180 text-gray-400">
-                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
-                                        <polyline points="6 9 12 15 18 9" />
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed"
-                                data-i18n="manual.faq_privacy_a">
-                                Solo usted puede ver su tag. Los datos de ubicación nunca se almacenan en la medalla, y
-                                la
-                                red está encriptada paso a paso.
+                        <!-- 4. Product Introduction -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-3" data-i18n="manual.android_sec4_title">4. Product Introduction</h3>
+                            <div class="ml-4 space-y-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-1" data-i18n="manual.android_sec4_1_title">4.1 Nearby Finding</h4>
+                                    <ul class="list-disc list-inside text-xs text-gray-600 dark:text-gray-400 space-y-1 pl-2">
+                                        <li data-i18n="manual.android_sec4_1_1">Indicate signal...</li>
+                                        <li data-i18n="manual.android_sec4_1_2">Play Sound...</li>
+                                        <li data-i18n="manual.android_sec4_1_3">Hey Google assistant...</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.android_sec4_2_title">4.2 A community for finding</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-1" data-i18n="manual.android_sec4_2_desc">Community network...</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.android_sec4_3_title">4.3 Enable Lost Mode</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-1" data-i18n="manual.android_sec4_3_desc">Enable lost mode on Android...</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.android_sec4_4_title">4.4 Location Sharing</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-1" data-i18n="manual.android_sec4_4_desc">Share location...</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.android_sec4_5_title">4.5 Unknown tracker alerts</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-1" data-i18n="manual.android_sec4_5_desc">Anti tracking alerts...</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-gray-700 dark:text-gray-300" data-i18n="manual.android_sec4_6_title">4.6 Privacy</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-1" data-i18n="manual.android_sec4_6_desc">End-to-end encrypted...</p>
+                                </div>
                             </div>
-                        </details>
-                        <details
-                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
-                            <summary
-                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
-                                <span data-i18n="manual.faq_tracking_q">¿Cómo evita el rastreo no deseado?</span>
-                                <span class="transition group-open:rotate-180 text-gray-400">
-                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
-                                        <polyline points="6 9 12 15 18 9" />
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed"
-                                data-i18n="manual.faq_tracking_a">
-                                Si un Tag desconocido se mueve con usted, recibirá una notificación (o el dispositivo
-                                sonará
-                                si no tiene smartphone).
+                        </div>
+
+                        <!-- 5. Button Function & Settings -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.android_sec5_title">5. Button Function & Settings</h3>
+                            <ul class="space-y-4 text-xs text-gray-600 dark:text-gray-400 ml-4 border-l-2 border-gray-200 dark:border-gray-700 pl-4">
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.android_sec5_1_title">5.1 Power on</strong>
+                                    <span data-i18n="manual.android_sec5_1_desc">Press 3 seconds...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.android_sec5_2_title">5.2 Power off</strong>
+                                    <span data-i18n="manual.android_sec5_2_desc">Hold 3 seconds...</span>
+                                </li>
+                                <li>
+                                    <strong class="block text-gray-750 dark:text-gray-350" data-i18n="manual.android_sec5_3_title">5.3 Restore factory settings</strong>
+                                    <span data-i18n="manual.android_sec5_3_desc">Click reset process...</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 7. Android FAQ -->
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200 mb-3" data-i18n="manual.android_sec7_title">7. Troubleshooting (FAQ)</h3>
+                            <div class="space-y-4 ml-4">
+                                <div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700 text-xs">
+                                    <strong class="block text-gray-800 dark:text-gray-200 mb-2" data-i18n="manual.android_sec7_q1">Can't Connect My Device With Google's Find Hub App:</strong>
+                                    <ul class="space-y-2 text-gray-600 dark:text-gray-400 list-none pl-0">
+                                        <li data-i18n="manual.android_sec7_m1">Method 1: Restart Bluetooth...</li>
+                                        <li data-i18n="manual.android_sec7_m2">Method 2: Reset tag...</li>
+                                        <li data-i18n="manual.android_sec7_m3">Method 3: Restart phone...</li>
+                                        <li data-i18n="manual.android_sec7_m4">Method 4: Update software...</li>
+                                        <li data-i18n="[html]manual.android_sec7_m5">Method 5: Settings steps...</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </details>
-                        <!-- NEW DISTANCE FAQ -->
-                        <details
-                            class="group bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-700 [&_summary::-webkit-details-marker]:hidden">
-                            <summary
-                                class="flex items-center justify-between p-6 cursor-pointer font-semibold text-lg text-pawtext dark:text-pawtextdark">
-                                <span data-i18n="manual.faq_distance_q">¿Cuál es el alcance o la distancia que tiene Paw
-                                    Tag?</span>
-                                <span class="transition group-open:rotate-180 text-gray-400">
-                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
-                                        <polyline points="6 9 12 15 18 9" />
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div class="px-6 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed space-y-2"
-                                data-i18n="[html]manual.faq_distance_a">
-                                ¡Paw Tag no tiene un límite de distancia máximo! Su tecnología protege a tu mascota en
-                                tres niveles:<br><br><strong>Rango Global:</strong> Usa la "Red de Cercanía"
-                                (Apple/Google). Si tu mascota se aleja, cualquier smartphone que pase cerca actualizará
-                                su ubicación en tu mapa de forma anónima y segura.<br><strong>Rango Corto (Hasta
-                                    15m):</strong> Si está cerca, usa Bluetooth para hacer sonar la medalla y
-                                encontrarla rápidamente.<br><strong>Rango de Contacto (NFC):</strong> Si alguien la
-                                encuentra, solo debe escanear la placa con su celular para ver tu número de emergencia.
-                            </div>
-                        </details>
+                        </div>
                     </div>
                 </section>
             </div>
 
+            <!-- Reemplazo de Batería y Correa (Shared Section) -->
+            <section class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700 max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-pawgreen dark:text-pawmint border-b border-gray-100 dark:border-gray-700 pb-4">
+                    <div class="w-10 h-10 bg-pawmint/20 rounded-xl flex items-center justify-center text-pawgreen dark:text-pawmint">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89H18m0 0a2 2 0 100 4h3" />
+                        </svg>
+                    </div>
+                    <span data-i18n="manual.android_sec6_title">6. Battery and Lanyard Replacement</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <ul class="list-decimal list-inside space-y-4 text-sm text-gray-700 dark:text-gray-300">
+                            <li data-i18n="manual.android_sec6_step1">Insert opening tool...</li>
+                            <li data-i18n="manual.android_sec6_step2">Rotate opening tool...</li>
+                            <li data-i18n="manual.android_sec6_step3">Use fingernails...</li>
+                            <li data-i18n="manual.android_sec6_step4">Replace battery...</li>
+                            <li data-i18n="manual.android_sec6_step5">Put lanyard and close...</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-sm mb-3 text-gray-500" data-i18n="manual.diag_battery_alt">Diagrama de reemplazo de batería y correa</h4>
+                        <div class="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white p-4 max-w-xs mx-auto">
+                            <img src="img/manual-diagrama-pila.png" alt="Diagrama de reemplazo" data-i18n="[alt]manual.diag_battery_alt" class="w-full h-auto object-contain dark:invert">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Safety Warnings -->
-            <section
-                class="bg-red-50 dark:bg-red-900/30 rounded-3xl p-8 border border-red-200 dark:border-red-800 relative shadow-inner">
-                <div class="absolute top-8 right-8 text-red-500 opacity-20">
+            <section class="bg-red-50 dark:bg-red-900/20 rounded-3xl p-8 border border-red-150 dark:border-red-800/40 relative shadow-sm max-w-4xl mx-auto">
+                <div class="absolute top-8 right-8 text-red-500 opacity-10 hidden sm:block">
                     <svg class="w-24 h-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                 </div>
-                <h2 class="text-2xl font-bold mb-6 text-red-700 dark:text-red-400 flex items-center gap-3">
+                
+                <h2 class="text-2xl font-bold mb-6 text-red-700 dark:text-red-400 flex items-center gap-3 border-b border-red-100 dark:border-red-900/30 pb-4">
                     <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
-                    <span data-i18n="manual.warnings_title">Advertencias de Seguridad</span>
+                    <span data-i18n="manual.warnings_title">Warnings & Safety Information</span>
                 </h2>
-                <div class="space-y-4 relative z-10 text-red-900 dark:text-red-200 font-medium">
-                    <div class="flex gap-4 items-start bg-white/50 dark:bg-black/20 p-4 rounded-xl">
-                        <div class="mt-1">⚠️</div>
-                        <p data-i18n="manual.warning_choking"><strong>Peligro de asfixia y quemaduras:</strong> Contiene
-                            una batería de botón tipo moneda.</p>
+
+                <div class="space-y-4 relative z-10 text-red-900 dark:text-red-200 text-sm">
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="[html]manual.warning_choking">
+                        Ingestion hazard...
                     </div>
-                    <div class="flex gap-4 items-start bg-white/50 dark:bg-black/20 p-4 rounded-xl">
-                        <div class="mt-1">🚫</div>
-                        <p data-i18n="manual.warning_kids">Mantenga las baterías de repuesto y el Tag desmontado fuera
-                            del alcance de los niños.</p>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="[html]manual.warning_kids">
+                        Keep out of reach...
                     </div>
-                    <div
-                        class="flex gap-4 items-start bg-red-100 dark:bg-red-900/50 p-4 rounded-xl border border-red-300 dark:border-red-700">
-                        <div class="mt-1 text-red-600 dark:text-red-400 text-xl">⚕️</div>
-                        <p data-i18n="manual.warning_medical"><strong>No ingiera la batería.</strong> Si sospecha
-                            ingestión, busque atención médica DE INMEDIATO; puede causar quemaduras graves o la muerte
-                            en 2 horas.</p>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="manual.warning_medical">
+                        Seek medical attention...
+                    </div>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="manual.warning_recycle">
+                        Recycle batteries...
+                    </div>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="manual.warning_discharge">
+                        Do not force discharge...
+                    </div>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="manual.warning_battery">
+                        CR2032 voltage...
+                    </div>
+                    <div class="bg-white/60 dark:bg-black/35 p-4 rounded-xl border border-red-200 dark:border-red-800/25" data-i18n="manual.warning_mix">
+                        Do not mix batteries...
                     </div>
                 </div>
+            </section>
 
+            <!-- FCC Statement -->
+            <section class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 border border-gray-200 dark:border-gray-800 max-w-4xl mx-auto">
+                <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200 flex items-center gap-2 border-b border-gray-200 dark:border-gray-800 pb-3" data-i18n="manual.fcc_title">
+                    FCC Statement
+                </h2>
+                <div class="space-y-3 text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p data-i18n="manual.fcc_compliance">This device complies with part 15...</p>
+                    <p data-i18n="manual.fcc_note">Note: This equipment has been tested...</p>
+                    <p class="font-semibold text-gray-700 dark:text-gray-300 pt-2 border-t border-gray-100 dark:border-gray-800" data-i18n="manual.fcc_origin">Made in China</p>
+                </div>
             </section>
         </div>
     </main>
