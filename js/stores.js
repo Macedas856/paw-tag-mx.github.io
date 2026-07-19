@@ -66,8 +66,65 @@ let currentStores = [...STORES];
 document.addEventListener('DOMContentLoaded', () => {
     const storesGrid = document.getElementById('stores-grid');
     const locateBtn = document.getElementById('btn-locate-user');
+    const mapElement = document.getElementById('map');
 
     if (!storesGrid) return; // Si no estamos en la página correcta, no hacemos nada
+
+    // --- Leaflet Map Setup ---
+    let map = null;
+    let markersGroup = null;
+    let userLocationMarker = null;
+
+    const getTileUrl = () => {
+        return document.documentElement.classList.contains('dark')
+            ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+            : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+    };
+
+    if (mapElement && typeof L !== 'undefined') {
+        // Inicializar mapa centrado en CDMX
+        map = L.map('map').setView([19.4326, -99.1332], 10);
+
+        const tileLayer = L.tileLayer(getTileUrl(), {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
+
+        markersGroup = L.featureGroup().addTo(map);
+
+        // Cambiar mapa en tema claro/oscuro
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                setTimeout(() => {
+                    tileLayer.setUrl(getTileUrl());
+                }, 150);
+            });
+        }
+    }
+
+    const updateMapMarkers = (stores) => {
+        if (!map || !markersGroup) return;
+        markersGroup.clearLayers();
+        stores.forEach(store => {
+            const marker = L.marker([store.lat, store.lng]).addTo(markersGroup);
+            marker.bindPopup(`
+                <div class="p-1 font-sans">
+                    <h4 class="font-bold text-sm text-gray-900">${store.name}</h4>
+                    <p class="text-xs text-gray-500 mt-1">${store.address}</p>
+                    <a href="${store.url}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs font-bold text-pawgreen hover:underline">
+                        Cómo llegar &rarr;
+                    </a>
+                </div>
+            `);
+        });
+
+        // Ajustar vista para mostrar todos los pins
+        if (stores.length > 0) {
+            map.fitBounds(markersGroup.getBounds().pad(0.15));
+        }
+    };
 
     // Renderizar la lista
     const renderStores = (stores) => {
@@ -115,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     renderStores(currentStores);
+    if (typeof L !== 'undefined') {
+        updateMapMarkers(currentStores);
+    }
 
     // Calcular distancia con Fórmula de Haversine
     const getDistanceFromLatLonInKm = (lat1, lon1, lat2, lon2) => {
@@ -163,6 +223,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         })).sort((a, b) => a.distance - b.distance);
 
                         renderStores(currentStores);
+
+                        // Actualizar mapa y añadir marcador de usuario
+                        if (map) {
+                            updateMapMarkers(currentStores);
+
+                            if (userLocationMarker) {
+                                map.removeLayer(userLocationMarker);
+                            }
+                            userLocationMarker = L.circleMarker([userLat, userLng], {
+                                radius: 8,
+                                fillColor: "#009175",
+                                color: "#ffffff",
+                                weight: 2,
+                                opacity: 1,
+                                fillOpacity: 0.8
+                            }).addTo(map).bindPopup("Tu ubicación").openPopup();
+
+                            const bounds = markersGroup.getBounds();
+                            bounds.extend([userLat, userLng]);
+                            map.fitBounds(bounds.pad(0.15));
+                        }
 
                         locateBtn.innerHTML = `
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

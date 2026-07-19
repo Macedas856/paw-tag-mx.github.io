@@ -20,6 +20,9 @@
     <!-- Base Styles -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind Configuration -->
@@ -507,6 +510,11 @@
             <div id="stores-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Renderizado vía JS -->
             </div>
+
+            <!-- Mapa Interactivo de Puntos de Venta -->
+            <div class="mt-12 rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 h-[450px] relative z-10">
+                <div id="map" class="w-full h-full"></div>
+            </div>
         </div>
     </section>
 
@@ -813,7 +821,9 @@
 
     <!-- App Scripts -->
     <script src="js/main.js" defer></script>
-    <script src="js/stores.js" defer></script>
+    <!-- Leaflet Map JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="js/stores.js?v=1.1" defer></script>
     <script src="js/i18n.js" defer></script>
 </body>
 
