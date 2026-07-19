@@ -226,5 +226,27 @@
     "fcc_compliance": "This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions: 1) This device may not cause harmful interference, and 2) This device must accept any interference received, including interference that may cause undesired operation.",
     "fcc_note": "Note: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules. Any changes or modifications not expressly approved by the party responsible for compliance could void the user's authority to operate the equipment.",
     "fcc_origin": "Made in China"
+  },
+  "links": {
+    "meta_title": "Paw Tag | Official Links",
+    "meta_desc": "Find all official links of Paw Tag: shop on TikTok Shop, download the app, activate your tag, and contact support.",
+    "bio": "The digital passport and security ecosystem for your companion. Connect their medical history, location, and contact in a single tap.",
+    "btn_instagram_title": "Official Instagram",
+    "btn_instagram_subtitle": "@pawtagmx | Photos & community",
+    "btn_tiktok_title": "TikTok Channel",
+    "btn_tiktok_subtitle": "@macedas.apps | Videos & trends",
+    "btn_youtube_title": "YouTube Channel",
+    "btn_youtube_subtitle": "Official reviews & tutorials",
+    "btn_facebook_title": "Official Facebook",
+    "btn_facebook_subtitle": "News & community alerts",
+    "btn_whatsapp_title": "WhatsApp Support",
+    "btn_whatsapp_subtitle": "Any questions? Write to us",
+    "btn_email_title": "Email Contact",
+    "btn_email_subtitle": "macedas856@gmail.com",
+    "ecosystem_title": "Paw Tag Ecosystem",
+    "btn_shop_compact": "Shop",
+    "btn_activate_compact": "Activate",
+    "btn_manual_compact": "Manual",
+    "back_to_home": "Back to website"
   }
 }

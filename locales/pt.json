@@ -224,5 +224,27 @@
         "fcc_compliance": "Este dispositivo está em conformidade com a parte 15 das Regras da FCC. O funcionamento está sujeito às duas condições seguintes: 1) Este dispositivo não pode causar interferência prejudicial e 2) este dispositivo deve aceitar qualquer interferência recebida, incluindo interferência que possa causar funcionamento indesejado.",
         "fcc_note": "Nota: Este equipamento foi testado e considerado em conformidade com os limites para um dispositivo digital de Classe B, de acordo com a parte 15 das Regras da FCC. Quaisquer alterações ou modificações não expressamente aprovadas pela parte responsável pela conformidade podem anular a autoridade do utilizador para operar o equipamento.",
         "fcc_origin": "Fabricado na China"
+    },
+    "links": {
+        "meta_title": "Paw Tag | Links Oficiais",
+        "meta_desc": "Encontre todos os links oficiais do Paw Tag: compre na TikTok Shop, baixe o aplicativo, ative sua medalha e entre em contato com o suporte.",
+        "bio": "O passaporte digital e ecossistema de segurança para o seu companheiro. Conecte seu histórico médico, localização e contato em um único toque.",
+        "btn_instagram_title": "Instagram Oficial",
+        "btn_instagram_subtitle": "@pawtagmx | Fotos e comunidade",
+        "btn_tiktok_title": "Canal do TikTok",
+        "btn_tiktok_subtitle": "@macedas.apps | Vídeos e tendências",
+        "btn_youtube_title": "Canal do YouTube",
+        "btn_youtube_subtitle": "Tutoriais e análises oficiais",
+        "btn_facebook_title": "Facebook Oficial",
+        "btn_facebook_subtitle": "Notícias e alertas da comunidade",
+        "btn_whatsapp_title": "WhatsApp de Suporte",
+        "btn_whatsapp_subtitle": "Tem dúvidas? Escreva para nós",
+        "btn_email_title": "Contacto por E-mail",
+        "btn_email_subtitle": "macedas856@gmail.com",
+        "ecosystem_title": "Ecossistema Paw Tag",
+        "btn_shop_compact": "Loja",
+        "btn_activate_compact": "Ativar",
+        "btn_manual_compact": "Manual",
+        "back_to_home": "Voltar ao site"
     }
 }

@@ -148,4 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }, { once: true }); // Solo lo contamos una vez por recarga
         }
     });
+
+    // 7. Rastrear clics en la página de enlaces (Linktree)
+    const linktreeLinks = document.querySelectorAll('[id^="linktree-"]');
+    linktreeLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const linkName = link.id.replace('linktree-', '');
+            trackEvent('click_linktree_opcion', {
+                'event_category': 'Engagement_Linktree',
+                'event_label': linkName,
+                'destination_url': link.href || 'button'
+            });
+        });
+    });
 });

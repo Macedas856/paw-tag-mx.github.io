@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="links.meta_title">Paw Tag | Enlaces Oficiales</title>
+    <meta name="description"
+        content="Encuentra todos los enlaces oficiales de Paw Tag: compra en TikTok Shop, descarga la app, activa tu medalla y contacta con soporte."
+        data-i18n="links.meta_desc">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/pawtag-icon.png">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSW5J7TQ0X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CSW5J7TQ0X');
+    </script>
+
+    <!-- Premium Custom Styles & Animations -->
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Neon glow effects for social networks on hover */
+        .glow-instagram {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-instagram:hover {
+            box-shadow: 0 10px 25px -5px rgba(225, 48, 108, 0.45), 0 8px 10px -6px rgba(225, 48, 108, 0.45);
+            border-color: rgba(225, 48, 108, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .glow-tiktok {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-tiktok:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 242, 234, 0.3), 0 8px 10px -6px rgba(254, 44, 85, 0.3);
+            border-color: rgba(0, 242, 234, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .glow-youtube {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-youtube:hover {
+            box-shadow: 0 10px 25px -5px rgba(255, 0, 0, 0.4), 0 8px 10px -6px rgba(255, 0, 0, 0.4);
+            border-color: rgba(255, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .glow-facebook {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-facebook:hover {
+            box-shadow: 0 10px 25px -5px rgba(24, 119, 242, 0.4), 0 8px 10px -6px rgba(24, 119, 242, 0.4);
+            border-color: rgba(24, 119, 242, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .glow-whatsapp {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-whatsapp:hover {
+            box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.45), 0 8px 10px -6px rgba(37, 211, 102, 0.45);
+            border-color: rgba(37, 211, 102, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .glow-email {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-email:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 145, 117, 0.35), 0 8px 10px -6px rgba(0, 145, 117, 0.35);
+            border-color: rgba(0, 145, 117, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-pawbg dark:bg-pawbgdark text-pawtext dark:text-pawtextdark font-sans antialiased min-h-screen flex flex-col transition-colors">
+
+    <!-- Main Container -->
+    <div class="flex-grow flex flex-col items-center justify-between p-4 relative overflow-hidden">
+        <!-- Background Blur Blobs -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-pawmint/20 dark:bg-pawmintdark/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-pawmint/20 dark:bg-pawmintdark/10 rounded-full blur-3xl -z-10"></div>
+
+        <!-- Upper Floating Controls (Lang & Theme) -->
+        <div class="w-full max-w-md flex justify-end items-center gap-3 mb-6 relative z-20">
+            <!-- Language Switcher -->
+            <select id="language-select"
+                class="bg-transparent text-sm font-medium text-pawtext dark:text-pawtextdark border-none focus:ring-0 cursor-pointer outline-none p-1">
+                <option value="es" class="text-black">ES</option>
+                <option value="en" class="text-black">EN</option>
+                <option value="pt" class="text-black">PT</option>
+            </select>
+
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" type="button"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Center Card Wrapper -->
+        <div class="w-full max-w-md flex flex-col items-center text-center z-10 flex-grow justify-center mb-8">
+            <!-- Profile Avatar with float animation -->
+            <div class="relative w-28 h-28 mb-4 group animate-float">
+                <div class="absolute inset-0 bg-gradient-to-tr from-pawgreen to-pawmint dark:from-pawmintdark dark:to-pawmint rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative w-28 h-28 rounded-full bg-white dark:bg-white p-2 flex items-center justify-center border-2 border-white dark:border-white shadow-inner">
+                    <img src="img/pawtag-logo.png" alt="Paw Tag Logo" class="w-22 h-auto object-contain">
+                </div>
+            </div>
+
+            <!-- Profile Title & Bio -->
+            <h1 class="text-2xl font-extrabold tracking-tight mb-2 text-pawtext dark:text-pawtextdark">Paw Tag</h1>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-8 max-w-sm px-4 leading-relaxed" data-i18n="links.bio">
+                El ecosistema de seguridad y bienestar para tu compañero. Conecta el historial médico, ubicación y contacto en un solo tap.
+            </p>
+
+            <!-- Social Networks Links List (Main Focus) -->
+            <div class="w-full space-y-3.5 px-2">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/522218751050" target="_blank" rel="noopener noreferrer" id="linktree-whatsapp"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-whatsapp group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-[#25d366] text-white rounded-xl flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_whatsapp_title">WhatsApp de Soporte</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_whatsapp_subtitle">¿Tienes dudas? Escríbenos</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/pawtagmx/" target="_blank" rel="noopener noreferrer" id="linktree-instagram"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-instagram group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-xl flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_instagram_title">Instagram Oficial</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_instagram_subtitle">@pawtagmx | Fotos y comunidad</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@macedas.apps" target="_blank" rel="noopener noreferrer" id="linktree-tiktok"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-tiktok group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-black dark:bg-white text-white dark:text-black rounded-xl flex items-center justify-center">
+                            <i class="fa-brands fa-tiktok text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_tiktok_title">TikTok Canal</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_tiktok_subtitle">@macedas.apps | Videos y tendencias</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@Macedas-g9t" target="_blank" rel="noopener noreferrer" id="linktree-youtube"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-youtube group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-red-600 text-white rounded-xl flex items-center justify-center">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_youtube_title">Canal de YouTube</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_youtube_subtitle">Tutoriales y reseñas oficiales</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61586531940468" target="_blank" rel="noopener noreferrer" id="linktree-facebook"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-facebook group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-[#1877f2] text-white rounded-xl flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_facebook_title">Facebook Oficial</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_facebook_subtitle">Noticias y alertas de la comunidad</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:macedas856@gmail.com" id="linktree-email"
+                    class="w-full flex items-center justify-between p-3.5 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-sm glow-email group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 bg-pawgreen text-white rounded-xl flex items-center justify-center">
+                            <i class="fa-regular fa-envelope text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm leading-tight text-pawtext dark:text-pawtextdark" data-i18n="links.btn_email_title">Correo Electrónico</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5" data-i18n="links.btn_email_subtitle">macedas856@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-450 dark:text-gray-500 group-hover:translate-x-1 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Brand Ecosystem Container (Secondary Actions Panel) -->
+            <div class="w-full mt-8 p-5 bg-white/50 dark:bg-gray-800/50 border border-white/10 dark:border-gray-700/30 rounded-3xl backdrop-blur-sm shadow-sm text-center">
+                <p class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4" data-i18n="links.ecosystem_title">Ecosistema Paw Tag</p>
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                    <!-- Shop -->
+                    <a href="https://vt.tiktok.com/ZS9evQ5ffuQDV-RH0E3/" target="_blank" rel="noopener noreferrer" id="linktree-shop"
+                        class="flex flex-col items-center justify-center p-3 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl hover:-translate-y-0.5 hover:shadow transition-all group">
+                        <span class="text-xl mb-1 group-hover:scale-110 transition-transform">🛒</span>
+                        <span class="text-[10px] font-bold text-pawtext dark:text-pawtextdark" data-i18n="links.btn_shop_compact">Tienda</span>
+                    </a>
+                    <!-- Activate -->
+                    <a href="activar.html" id="linktree-activate"
+                        class="flex flex-col items-center justify-center p-3 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl hover:-translate-y-0.5 hover:shadow transition-all group">
+                        <span class="text-xl mb-1 group-hover:scale-110 transition-transform">🐾</span>
+                        <span class="text-[10px] font-bold text-pawtext dark:text-pawtextdark" data-i18n="links.btn_activate_compact">Activar</span>
+                    </a>
+                    <!-- Manual -->
+                    <a href="manual.html" id="linktree-manual"
+                        class="flex flex-col items-center justify-center p-3 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl hover:-translate-y-0.5 hover:shadow transition-all group">
+                        <span class="text-xl mb-1 group-hover:scale-110 transition-transform">📖</span>
+                        <span class="text-[10px] font-bold text-pawtext dark:text-pawtextdark" data-i18n="links.btn_manual_compact">Manual</span>
+                    </a>
+                </div>
+                
+                <!-- Dual App Download Row -->
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <a href="https://apps.apple.com/mx/app/paw-tag/id6739967090?l=en-GB" target="_blank" rel="noopener noreferrer" id="linktree-apple"
+                        class="flex items-center justify-center gap-2 bg-black hover:bg-gray-900 text-white dark:bg-gray-900 dark:hover:bg-black p-2.5 rounded-xl transition-all shadow-sm h-10 border border-transparent dark:border-gray-800">
+                        <img src="img/logotipo-de-apple.png" alt="Apple" class="w-4 h-4 object-contain invert">
+                        <span class="text-[10px] font-bold">App Store</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.macedas.paw_tag&hl=es" target="_blank" rel="noopener noreferrer" id="linktree-android"
+                        class="flex items-center justify-center gap-2 bg-black hover:bg-gray-900 text-white dark:bg-gray-900 dark:hover:bg-black p-2.5 rounded-xl transition-all shadow-sm h-10 border border-transparent dark:border-gray-800">
+                        <img src="img/google-play.png" alt="Google Play" class="w-4 h-4 object-contain">
+                        <span class="text-[10px] font-bold truncate text-left">Google Play</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="w-full max-w-md text-center z-10 mt-auto pt-6 border-t border-gray-100 dark:border-gray-800/80 transition-colors">
+            <!-- Home Link -->
+            <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-pawgreen dark:text-pawmint hover:underline mb-4" data-i18n="links.back_to_home">
+                Volver al sitio web
+            </a>
+
+            <!-- Copyright -->
+            <p class="text-[10px] text-gray-400 dark:text-gray-500" data-i18n="footer.rights">&copy; 2026 Paw Tag. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <!-- App Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</body>
+
+</html>
