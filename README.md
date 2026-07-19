@@ -41,7 +41,7 @@ La página soporta Español, Inglés y Portugués.
   
   **Eventos Críticos (Conversiones configurables en GA4):**
   1. `click_activacion_tag`: Evento en `Engagement_Activacion`. Para embudo "Landing -> Activar".
-  2. `intent_compra_tiktok`: (CRÍTICO - e-commerce) Disparado cuando intentan comprar. Va acompañado de un `begin_checkout` estándar para medir el valor ($349 MXN).
+  2. `intent_compra_tiktok`: (CRÍTICO - e-commerce) Disparado cuando intentan comprar. Va acompañado de un `begin_checkout` estándar para medir el valor ($399 MXN).
   3. `click_descarga_app`: Evento en `Adquisicion_App`. Pasa el parámetro de plataforma (iOS/Android) como propiedad.
   4. `generar_lead_b2b`: Evento en `Leads_B2B`. Informa métricas de leads comerciales (B2B, WhatsApp, Email).
   5. `lectura_faq` e `intento_ver_video`: Rastrea comportamiento analítico en páginas base y videos.

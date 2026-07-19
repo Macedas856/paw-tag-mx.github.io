@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         item_name: "Paw Tag Smart Tag",
                         currency: "MXN",
-                        price: 349.00
+                        price: 399.00
                     }
                 ]
             });
