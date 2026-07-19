@@ -36,6 +36,27 @@ const STORES = [
         lat: 19.3758301,
         lng: -99.1580984,
         url: "https://www.google.com/maps/place/Woof+Miaow/@19.3758301,-99.1606733,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1ffef85e27063:0xfc8e980a12ab3f73!8m2!3d19.3758301!4d-99.1580984!16s%2Fg%2F11kf6wdv8n?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        name: "CRAZY WORLD PETS",
+        address: "Coacalco, Edo. de México",
+        lat: 19.6567277,
+        lng: -98.9808705,
+        url: "https://www.google.com/maps/place/CRAZY+WORLD+PETS/@19.6594454,-99.005261,13.42z/data=!4m6!3m5!1s0x85d1ed990ebfef59:0x34b9479fb59f7488!8m2!3d19.6567277!4d-98.9808705!16s%2Fg%2F11p74hp79g?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        name: "MascotLand",
+        address: "Iztapalapa, CDMX",
+        lat: 19.3329768,
+        lng: -99.0696363,
+        url: "https://www.google.com/maps/place/Veterinaria+y+Estética+Canina+%22MascotLand%22+🐾/@19.3329818,-99.0722166,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce0346eb0f1da1:0xb293a25d21154659!8m2!3d19.3329768!4d-99.0696363!16s%2Fg%2F11lgy4cl2l?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        name: "MascoFit",
+        address: "Satélite, Edo. de México",
+        lat: 19.5188277,
+        lng: -99.2329489,
+        url: "https://www.google.com/maps/place/Adsa+Satélite/@19.5188187,-99.2337594,19z/data=!4m15!1m7!3m6!1s0x85d203b38b37e94b:0x6febbaa42ca4ba9f!2sAdsa+Satélite!8m2!3d19.5188277!4d-99.2329489!16s%2Fg%2F1td9f2ts!3m6!1s0x85d203b38b37e94b:0x6febbaa42ca4ba9f!8m2!3d19.5188277!4d-99.2329489!15sCg1wYWJlbGxvbiBhZHNhWg8iDXBhYmVsbG9uIGFkc2GSAQ1wYXJ0eV9wbGFubmVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5UVVJSY25GaGJISlJSUkFC4AEA-gEFCNMDECM!16s%2Fg%2F1td9f2ts?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
     }
 ];
 
