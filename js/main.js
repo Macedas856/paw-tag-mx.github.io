@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función ayudante para enviar eventos de forma segura
     const trackEvent = (eventName, eventParams) => {
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log(`[Analytics Dev] Evento: ${eventName}`, eventParams);
+        }
         if (typeof gtag === 'function') {
             gtag('event', eventName, eventParams);
         } else {
@@ -161,4 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // 8. Rastrear visitas directas a la página de enlaces (Linktree)
+    if (window.location.pathname.includes('links.html')) {
+        trackEvent('view_links_page', {
+            'event_category': 'Engagement_Linktree',
+            'event_label': 'Visita Links Page'
+        });
+    }
 });
